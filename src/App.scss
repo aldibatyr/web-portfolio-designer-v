@@ -1,0 +1,65 @@
+$beige: #FCF1E1;
+$dark: #1c1c1c;
+$yellow: #EDE511;
+
+
+.Logo-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  a {
+    text-decoration: none !important;
+  }
+  .Logo-text-wrapper {
+    width: 200px;
+    height: 50px;
+    background-color: #FFFFFF;
+    text-align: center;
+    &:hover {
+      background-color: $beige;
+    }
+    transition: 0.3s ease-in-out;
+    h1 {
+      font-family: 'Playfair Display', serif;
+      color: #1c1c1c;
+      text-decoration: none;
+    }
+  }
+}
+
+.Navigation-wrapper {
+  width: 120px;
+  height: 100vh;
+  background-color: $beige;
+  position: fixed;
+  top: 0;
+  right: 0;
+  .Navigation {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .Link-to-section{
+      height: 20%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      transition: 0.2s all ease-in;
+      .text {
+        color: $dark;
+        font-family: 'Montserrat', 'sans-serif';
+        transform: rotate(90deg);
+        position: relative;
+        .overlay {
+          transform: rotate(90deg);
+          height: 20px;
+          width: 10px;
+          background-color: $yellow;
+        }
+      }
+      
+    }
+  }
+}

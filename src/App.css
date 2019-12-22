@@ -1,0 +1,60 @@
+.Logo-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.Logo-box a {
+  text-decoration: none !important;
+}
+.Logo-box .Logo-text-wrapper {
+  width: 200px;
+  height: 50px;
+  background-color: #FFFFFF;
+  text-align: center;
+  transition: 0.3s ease-in-out;
+}
+.Logo-box .Logo-text-wrapper:hover {
+  background-color: #FCF1E1;
+}
+.Logo-box .Logo-text-wrapper h1 {
+  font-family: "Playfair Display", serif;
+  color: #1c1c1c;
+  text-decoration: none;
+}
+
+.Navigation-wrapper {
+  width: 120px;
+  height: 100vh;
+  background-color: #FCF1E1;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+.Navigation-wrapper .Navigation {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.Navigation-wrapper .Navigation .Link-to-section {
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: 0.2s all ease-in;
+}
+.Navigation-wrapper .Navigation .Link-to-section .text {
+  color: #1c1c1c;
+  font-family: "Montserrat", "sans-serif";
+  transform: rotate(90deg);
+  position: relative;
+}
+.Navigation-wrapper .Navigation .Link-to-section .text .overlay {
+  transform: rotate(90deg);
+  height: 20px;
+  width: 10px;
+  background-color: #EDE511;
+}
+
+/*# sourceMappingURL=App.css.map */
