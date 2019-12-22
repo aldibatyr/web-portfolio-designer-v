@@ -1,6 +1,7 @@
 $beige: #FCF1E1;
 $dark: #1c1c1c;
 $yellow: #EDE511;
+$palered: #9A5151;
 
 
 .Logo-box {
@@ -34,6 +35,7 @@ $yellow: #EDE511;
   position: fixed;
   top: 0;
   right: 0;
+  z-index: 1;
   .Navigation {
     height: 100%;
     width: 100%;
@@ -47,6 +49,11 @@ $yellow: #EDE511;
       align-items: center;
       text-decoration: none;
       transition: 0.2s all ease-in;
+      &:hover {
+        transform: translateX(2px);
+        background-color: $yellow;
+        box-shadow: 0px 4px 8px #363434a2;
+      }
       .text {
         color: $dark;
         font-family: 'Montserrat', 'sans-serif';
@@ -61,5 +68,139 @@ $yellow: #EDE511;
       }
       
     }
+  }
+}
+
+.Hero {
+  .Hero-row {
+    color: #1e1e1e;
+    font-family: 'Playfair Display', serif;
+    .Hero-hello-col {
+      margin-top: 100px;
+      .Text-box-hello {
+        position: relative;
+        width: 70%;
+        height: 180px;
+        background-color: $beige;
+        z-index: 2;
+        .Hello-h1 {
+          transform: translateX(80px);
+          .Hello-span {
+            font-size: 4rem;
+          }
+        }
+        .My-name-h1 {
+          width: 150%;
+          .My-name-span {
+            font-size: 4rem;
+          }
+        }
+      }
+      .Text-box-is {
+        position: relative;
+        width: 40%;
+        height: 140px;
+        background-color: $beige;
+        transform: translate(250px, -100px);
+        z-index: 1;
+        .Is-h1 {
+          position: relative;
+          .Is-span {
+            position: absolute;
+            top: -30px;
+            right: 0;
+            font-size: 8rem;
+          }
+        }
+      }
+      .Text-box-Aldiyar {
+        width: 80%;
+        height: 180px;
+        background-color: $beige;
+        margin: 0 auto;
+        transform: translateY(-120px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .Aldiyar-h1 {
+          .Aldiyar-span {
+            font-size: 7rem;
+            color: $palered;
+          }
+        }
+      }
+    }
+    .Contact-button-col {
+      .Contact-button-wrapper {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .Contact-button {
+          display: flex;
+          flex-direction: row;
+          width: 120px;
+          height: 50px;
+          background-color: $palered;
+          overflow: hidden;
+          border: none;
+          color: $beige;
+          font-size: 1rem;
+          transition: 0.15s color ease-in-out;
+          &:hover {
+            color: $dark;
+            .Contact-button-arrow {
+              .Arrow-body {
+                width: 30px;
+                border: 0.5px solid $dark;
+              }
+              .Arrow-triangle {
+                border-left: 5px solid $dark;
+              }
+            }
+          }
+          .Contact-button-text {
+            height: 50px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            p {
+              margin: 0;
+            }
+            font-family: 'Montserrat', 'sans-serif';
+          }
+          .Contact-button-arrow {
+            height: 50px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            padding-left: 5px;
+            align-items: center;
+            .Arrow-body {
+              display: block;
+              height:1px;
+              width: 10px;
+              border: $beige 0.5px solid;
+              transition: 0.3s width ease-in-out;
+            }
+            .Arrow-triangle {
+              border-top: 3px solid transparent;
+              border-bottom: 3px solid transparent;
+              border-left: 5px solid $beige;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .Text-box-hello {
+    width: 150px;
+  }
+  .Text-box-is {
+    transform: translate(1px, 1px);
   }
 }

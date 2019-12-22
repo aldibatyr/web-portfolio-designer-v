@@ -29,6 +29,7 @@
   position: fixed;
   top: 0;
   right: 0;
+  z-index: 1;
 }
 .Navigation-wrapper .Navigation {
   height: 100%;
@@ -44,6 +45,11 @@
   text-decoration: none;
   transition: 0.2s all ease-in;
 }
+.Navigation-wrapper .Navigation .Link-to-section:hover {
+  transform: translateX(2px);
+  background-color: #EDE511;
+  box-shadow: 0px 4px 8px #363434a2;
+}
 .Navigation-wrapper .Navigation .Link-to-section .text {
   color: #1c1c1c;
   font-family: "Montserrat", "sans-serif";
@@ -55,6 +61,133 @@
   height: 20px;
   width: 10px;
   background-color: #EDE511;
+}
+
+.Hero .Hero-row {
+  color: #1e1e1e;
+  font-family: "Playfair Display", serif;
+}
+.Hero .Hero-row .Hero-hello-col {
+  margin-top: 100px;
+}
+.Hero .Hero-row .Hero-hello-col .Text-box-hello {
+  position: relative;
+  width: 70%;
+  height: 180px;
+  background-color: #FCF1E1;
+  z-index: 2;
+}
+.Hero .Hero-row .Hero-hello-col .Text-box-hello .Hello-h1 {
+  transform: translateX(80px);
+}
+.Hero .Hero-row .Hero-hello-col .Text-box-hello .Hello-h1 .Hello-span {
+  font-size: 4rem;
+}
+.Hero .Hero-row .Hero-hello-col .Text-box-hello .My-name-h1 {
+  width: 150%;
+}
+.Hero .Hero-row .Hero-hello-col .Text-box-hello .My-name-h1 .My-name-span {
+  font-size: 4rem;
+}
+.Hero .Hero-row .Hero-hello-col .Text-box-is {
+  position: relative;
+  width: 40%;
+  height: 140px;
+  background-color: #FCF1E1;
+  transform: translate(250px, -100px);
+  z-index: 1;
+}
+.Hero .Hero-row .Hero-hello-col .Text-box-is .Is-h1 {
+  position: relative;
+}
+.Hero .Hero-row .Hero-hello-col .Text-box-is .Is-h1 .Is-span {
+  position: absolute;
+  top: -30px;
+  right: 0;
+  font-size: 8rem;
+}
+.Hero .Hero-row .Hero-hello-col .Text-box-Aldiyar {
+  width: 80%;
+  height: 180px;
+  background-color: #FCF1E1;
+  margin: 0 auto;
+  transform: translateY(-120px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Hero .Hero-row .Hero-hello-col .Text-box-Aldiyar .Aldiyar-h1 .Aldiyar-span {
+  font-size: 7rem;
+  color: #9A5151;
+}
+.Hero .Hero-row .Contact-button-col .Contact-button-wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Hero .Hero-row .Contact-button-col .Contact-button-wrapper .Contact-button {
+  display: flex;
+  flex-direction: row;
+  width: 120px;
+  height: 50px;
+  background-color: #9A5151;
+  overflow: hidden;
+  border: none;
+  color: #FCF1E1;
+  font-size: 1rem;
+  transition: 0.15s color ease-in-out;
+}
+.Hero .Hero-row .Contact-button-col .Contact-button-wrapper .Contact-button:hover {
+  color: #1c1c1c;
+}
+.Hero .Hero-row .Contact-button-col .Contact-button-wrapper .Contact-button:hover .Contact-button-arrow .Arrow-body {
+  width: 30px;
+  border: 0.5px solid #1c1c1c;
+}
+.Hero .Hero-row .Contact-button-col .Contact-button-wrapper .Contact-button:hover .Contact-button-arrow .Arrow-triangle {
+  border-left: 5px solid #1c1c1c;
+}
+.Hero .Hero-row .Contact-button-col .Contact-button-wrapper .Contact-button .Contact-button-text {
+  height: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "Montserrat", "sans-serif";
+}
+.Hero .Hero-row .Contact-button-col .Contact-button-wrapper .Contact-button .Contact-button-text p {
+  margin: 0;
+}
+.Hero .Hero-row .Contact-button-col .Contact-button-wrapper .Contact-button .Contact-button-arrow {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  padding-left: 5px;
+  align-items: center;
+}
+.Hero .Hero-row .Contact-button-col .Contact-button-wrapper .Contact-button .Contact-button-arrow .Arrow-body {
+  display: block;
+  height: 1px;
+  width: 10px;
+  border: #FCF1E1 0.5px solid;
+  transition: 0.3s width ease-in-out;
+}
+.Hero .Hero-row .Contact-button-col .Contact-button-wrapper .Contact-button .Contact-button-arrow .Arrow-triangle {
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-left: 5px solid #FCF1E1;
+}
+
+@media screen and (max-width: 320px) {
+  .Text-box-hello {
+    width: 150px;
+  }
+
+  .Text-box-is {
+    transform: translate(1px, 1px);
+  }
 }
 
 /*# sourceMappingURL=App.css.map */
