@@ -28,8 +28,22 @@ const Hero = () => {
             </button>
           </div>
         </Col>
-        <Col>
-          Three
+        <Col className="Hero-I-am-col" lg={5} xs={12}>
+          <div className="I-am-wrapper">
+            <div className="I-am-box">
+              <span>I</span>
+              <span className="Smaller-text">AM</span>
+              <span>A</span>
+            </div>
+            <div className="Web-dev-box">
+              <div className="Web-dev-text-wrapper">
+                <span className="Underlined">WEB</span>
+                <span>DEV</span>
+                <span>ELO</span>
+                <span>PER</span>
+              </div>
+            </div>
+          </div>
         </Col>
       </Row>
     </Container>

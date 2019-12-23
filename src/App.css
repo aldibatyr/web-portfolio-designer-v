@@ -107,6 +107,9 @@
   font-size: 8rem;
 }
 .Hero .Hero-row .Hero-hello-col .Text-box-Aldiyar {
+  position: relative;
+  z-index: 4;
+  box-shadow: 0px 3px 6px #00000098;
   width: 80%;
   height: 180px;
   background-color: #FCF1E1;
@@ -178,6 +181,38 @@
   border-top: 3px solid transparent;
   border-bottom: 3px solid transparent;
   border-left: 5px solid #FCF1E1;
+}
+.Hero .Hero-row .Hero-I-am-col .I-am-wrapper .I-am-box {
+  position: relative;
+  z-index: 2;
+  height: 350px;
+  width: 120px;
+  background-color: #FCF1E1;
+  text-align: center;
+}
+.Hero .Hero-row .Hero-I-am-col .I-am-wrapper .I-am-box span {
+  line-height: 1.1;
+  margin: 0;
+  font-size: 120px;
+  display: block;
+}
+.Hero .Hero-row .Hero-I-am-col .I-am-wrapper .I-am-box .Smaller-text {
+  font-size: 60px;
+}
+.Hero .Hero-row .Hero-I-am-col .I-am-wrapper .Web-dev-box {
+  height: 416px;
+  width: 260px;
+  background-color: #FCF1E1;
+  transform: translate(50px, -300px);
+  text-align: right;
+}
+.Hero .Hero-row .Hero-I-am-col .I-am-wrapper .Web-dev-box span {
+  display: block;
+  line-height: 1.1;
+  font-size: 5.25rem;
+}
+.Hero .Hero-row .Hero-I-am-col .I-am-wrapper .Web-dev-box .Underlined {
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 320px) {

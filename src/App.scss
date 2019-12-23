@@ -114,6 +114,9 @@ $palered: #9A5151;
         }
       }
       .Text-box-Aldiyar {
+        position: relative;
+        z-index: 4;
+        box-shadow: 0px 3px 6px #00000098;
         width: 80%;
         height: 180px;
         background-color: $beige;
@@ -189,6 +192,42 @@ $palered: #9A5151;
               border-bottom: 3px solid transparent;
               border-left: 5px solid $beige;
             }
+          }
+        }
+      }
+    }
+    .Hero-I-am-col {
+      .I-am-wrapper {
+        .I-am-box {
+          position: relative;
+          z-index: 2;
+          height: 350px;
+          width: 120px;
+          background-color: $beige;
+          text-align: center;
+          span {
+            line-height: 1.1;
+            margin: 0;
+            font-size: 120px;
+            display: block;
+          }
+          .Smaller-text {
+            font-size: 60px;
+          }
+        }
+        .Web-dev-box {
+          height: 416px;
+          width: 260px;
+          background-color: $beige;
+          transform: translate(50px, -300px);
+          text-align: right;
+          span {
+            display: block;
+            line-height: 1.1;
+            font-size: 5.25rem;
+          }
+          .Underlined {
+            text-decoration: underline;
           }
         }
       }
