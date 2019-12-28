@@ -573,7 +573,7 @@ $break-handheld: 1024px;
         .Three-column-row {
           .Social-media-column {
             .Social-media-text {
-              .Social-media-text-box {
+              .Text-box {
                 position: relative;
                 height: 100%;
                 width: 100%;
@@ -623,12 +623,6 @@ $break-handheld: 1024px;
                   }
                 }
               }
-
-              .Social-media-text-box-back {
-                background-color: $beige;
-                width: 100%;
-                height: 100%;
-              }
             }
           }
 
@@ -645,11 +639,15 @@ $break-handheld: 1024px;
             .image {
               position: relative;
               font-family: 'Playfair Display', 'serif';
+              width: 100%;
 
               .Left-text {
+                margin: 0;
+                padding: 0;
+                line-height: 0;
                 position: absolute;
-                left: -70%;
-                top: 45%;
+                left: -240px;
+                top: 150px;
                 color: $darktext;
                 transform: rotate(270deg);
 
@@ -660,23 +658,24 @@ $break-handheld: 1024px;
 
               .Right-text {
                 position: absolute;
-                right: -70%;
-                top: 45%;
+                right: -240px;
+                top: 150px;
                 transform: rotate(90deg);
                 color: $darktext;
 
                 h3 {
                   font-size: 3rem;
-                  // transform: rotate(90deg);
                 }
               }
+
               .Bottom-text {
                 margin-left: 10%;
                 width: 80%;
                 position: absolute;
-                bottom: -20%;
+                bottom: -60px;
                 color: $darktext;
                 text-align: center;
+
                 h3 {
                   font-size: 3rem;
                 }
@@ -690,5 +689,329 @@ $break-handheld: 1024px;
         }
       }
     }
+  }
+}
+
+
+.formExample {
+  padding: 5% 10%;
+  background-color: $beige;
+  width: 100%;
+  display: block;
+  font-family: 'Playfair Display', 'serif';
+  transition: 0.5s;
+  box-shadow: 0px 9px 6px #00000033;
+}
+
+
+.successLogin {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  transition: 0.5s;
+  background-color: $darktext;
+  padding: 5% 10%;
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.356);
+}
+
+#goGreen {
+  background: green;
+}
+
+.formSection {
+  display: flex;
+  justify-items: space-evenly;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.label {
+  padding-left: 10px;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.input {
+  width: 100%;
+  margin: auto;
+  height: 40px;
+  padding-left: 10px;
+  font-size: 14px;
+  border: 1px solid $dark;
+  color: $darktext;
+  // border-radius: 5px;
+  background: #fff;
+  transition: 0.3s;
+}
+
+.input:hover {
+  background: #fff;
+  color: #000;
+}
+
+.input:focus {
+  background: #fff;
+  color: #000;
+}
+
+.shake {
+  animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
+  border: 1px solid red;
+}
+
+.formActions {
+  text-align: center;
+}
+
+.goBackButton {
+  width: 90%;
+  height: 36px;
+  background: $dark;
+  border: 1px solid #fff;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.goBackButton:hover {
+  cursor: pointer;
+  background: $beige;
+  color: #000;
+}
+
+.goBackButton:focus {
+  cursor: pointer;
+  background: #fff;
+  color: #000;
+}
+
+
+.button {
+  text-transform: uppercase;
+  margin-top: 21px;
+  width: 90%;
+  height: 36px;
+  // border-radius: 5px;
+  background: $dark;
+  border: 1px solid $dark;
+  color: $darktext;
+  transition: 0.3s;
+}
+
+.button:hover {
+  cursor: pointer;
+  background: #fff;
+  color: #000;
+}
+
+.button:focus {
+  cursor: pointer;
+  background: #fff;
+  color: #000;
+}
+
+.buttonDisabled {
+  text-transform: uppercase;
+  margin-top: 21px;
+  width: 90%;
+  height: 36px;
+  border-radius: 5px;
+  background: grey;
+  border: 1px solid #fff;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.error {
+  text-align: center;
+  font-family: 'Montserrat', 'sans-serif';
+  color: red;
+  margin: 0 5%;
+}
+
+.my-node-enter {
+  transform: scale(0.5);
+}
+
+.my-node-enter-active {
+  transform: scale(1);
+  transition: transform 800ms;
+}
+
+.my-node-exit {
+  transform: scale(1);
+}
+
+.my-node-exit-active {
+  transform: scale(0.5);
+  transition: transform 800ms;
+}
+
+.back-enter {
+  transform: scale(0.5);
+}
+
+.back-enter-active {
+  transform: scale(1);
+  transition: transform 800ms;
+}
+
+.back-exit-active {
+  transform: scale(1);
+}
+
+.back-exit-active {
+  transform: scale(0.5);
+  transition: transform 800ms;
+}
+
+@keyframes shake {
+
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+.different {
+  border-left: 1px solid $palered !important;
+}
+
+.Form-and-animations-column {
+  position: relative;
+  margin: 100px 0;
+  .Form-container {
+    position: relative;
+    font-family: 'Playfair Display', serif;
+
+    .Left-text {
+      margin: 0;
+      padding: 0;
+      line-height: 0;
+      position: absolute;
+      left: -200px;
+      bottom: 75px;
+      color: $darktext;
+      transform: rotate(270deg);
+
+      h3 {
+        font-size: 2.5rem;
+      }
+    }
+
+    .Right-text {
+      position: absolute;
+      right: -120px;
+      top: 75px;
+      transform: rotate(90deg);
+      color: $darktext;
+
+      h3 {
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  .Form-and-animations-text-box {
+    position: relative;
+    width: 100%;
+    padding: 10px 10px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 6px #000000;
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      background-color: $beige;
+      width: 100%;
+      height: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-45%, -55%);
+      ;
+    }
+
+    p {
+      font-family: 'Playfair Display', 'serif';
+    }
+  }
+}
+
+.Work-ethics-column {
+  .Work-ethics-image {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    .Left-text {
+      margin: 0;
+      padding: 0;
+      line-height: 0;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      color: $darktext;
+      transform: rotate(270deg);
+
+      h3 {
+        font-size: 2.5rem;
+      }
+    }
+
+    .Right-text {
+      position: absolute;
+      right: -120px;
+      top: 75px;
+      transform: rotate(90deg);
+      color: $darktext;
+
+      h3 {
+        font-size: 2.5rem;
+      }
+    }
+    img {
+      width: 200%;
+    }
+  }
+}
+
+.Work-ethics-text-box {
+  background-color: #fff;
+  padding: 10px;
+  position: relative;
+  box-shadow: 0px 3px 6px #00000044;
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background-color: $beige;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-45%, -40%);
+  }
+
+
+  p {
+    font-family: 'Playfair Display', serif;
   }
 }
