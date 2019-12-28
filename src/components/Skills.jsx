@@ -2,7 +2,9 @@ import React, { useState, useRef, useLayoutEffect } from 'react'
 import SideTag from './SideTag'
 import { Container, Col, Row } from 'react-bootstrap';
 import SocialMediaImg from '../Assets/laptop-and-iphone-x-xs.jpg';
-import WorkEthics from '../Assets/business-strategic-planning.jpg'
+import WorkEthics from '../Assets/business-strategic-planning.jpg';
+import ProductsOnDesk from '../Assets/apple-products-on-desk-web-development.jpg';
+import IphoneImage from '../Assets/iphone-x-xs-11-pro-max-on the-desk.jpg';
 import Form from './Form';
 
 
@@ -14,12 +16,15 @@ const Skills = () => {
   }, [height])
   console.log('divHeight is', height)
   return (
-    <section ref={ref} className="Skills">
+    <section ref={ref} className="Skills" id="skills">
       <SideTag zIndex="3" height={height} name="skills" side="right" />
       <div className="Skills-full-screen">
         <div className="Light">
-          <div style={{ maxHeight: height }} className="Light-text-wrapper">
+          <div className="Light-text-wrapper">
             <p>
+              THROUGH THE YEARS OF CONSTANT WORK AND SELF IMPROVEMENT I FOUND THAT THE BEST MOTIVATION FOR A PROGRESS IS THE ABILITY TO THINK FREELY AND IMPLEMENT SELF’S VISION.
+              THROUGH THE YEARS OF CONSTANT WORK AND SELF IMPROVEMENT I FOUND THAT THE BEST MOTIVATION FOR A PROGRESS IS THE ABILITY TO THINK FREELY AND IMPLEMENT SELF’S VISION.
+              THROUGH THE YEARS OF CONSTANT WORK AND SELF IMPROVEMENT I FOUND THAT THE BEST MOTIVATION FOR A PROGRESS IS THE ABILITY TO THINK FREELY AND IMPLEMENT SELF’S VISION.
               THROUGH THE YEARS OF CONSTANT WORK AND SELF IMPROVEMENT I FOUND THAT THE BEST MOTIVATION FOR A PROGRESS IS THE ABILITY TO THINK FREELY AND IMPLEMENT SELF’S VISION.
               THROUGH THE YEARS OF CONSTANT WORK AND SELF IMPROVEMENT I FOUND THAT THE BEST MOTIVATION FOR A PROGRESS IS THE ABILITY TO THINK FREELY AND IMPLEMENT SELF’S VISION.
               THROUGH THE YEARS OF CONSTANT WORK AND SELF IMPROVEMENT I FOUND THAT THE BEST MOTIVATION FOR A PROGRESS IS THE ABILITY TO THINK FREELY AND IMPLEMENT SELF’S VISION.
@@ -66,15 +71,48 @@ const Skills = () => {
                 </div>
               </Col>
               <Col xs={12} lg={4} className="Work-ethics-column">
-
-                <div className="Work-ethics-image">
+                <div className="Work-ethics-image-wrapper">
                   <div className="Left-text"><h3>WORK ETHICS</h3></div>
                   <div className="Right-text"><h3>DRIVE</h3></div>
-                  <img src={WorkEthics} alt="two persons discussing the strategy of a business growth" />
+                  <div className="Work-ethics-image">
+                    <img src={WorkEthics} alt="two persons discussing the strategy of a business growth" />
+                  </div>
                 </div>
+
                 <span className='Pointer different' ></span>
                 <div className="Work-ethics-text-box">
                   <p>Work ethics are a great addition to the skill set of a person. Humbleness and dedication to do the best drive better results.</p>
+                </div>
+              </Col>
+            </Row>
+            <Row className='Two-column-row'>
+              <Col xs={12} lg={6} className="Right-column">
+                <div className="Image-wrapper">
+                  <div className="Top-text"><h3>mobile first design</h3></div>
+                  <div className="Bottom-text"><h3>responsive design</h3></div>
+                  <div className="Image">
+                    <img src={ProductsOnDesk} alt="apple products on the desk"/>
+                  </div>
+                </div>
+              </Col>
+              <Col xs={12} lg={6} className="Left-column">
+                <div className="text-box">
+                  <p>Todays media consumption medium calls for a solution that is not only informative, but looks great on multiple devices. By implementing responsive and mobile first design we are able to achieve a better conversion rate.</p>
+                </div>
+              </Col>
+            </Row>
+            <Row className="Two-column-row">
+              <Col xs={12} lg={6} className="Left-column">
+                <div className="text-box">
+                  <p>I am currently working on mobile development skills by creating hybrid and PWA</p>
+                </div>
+              </Col>
+              <Col xs={12} lg={6} className="Right-column">
+                <div className="Image-wrapper">
+                  <div className="Bottom-text"><h3>mobile applications</h3></div>
+                  <div className="Image">
+                    <img src={IphoneImage} alt="iphone on desk and keyboard on the background"/>
+                  </div>
                 </div>
               </Col>
             </Row>

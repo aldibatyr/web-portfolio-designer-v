@@ -13,7 +13,7 @@ const About = () => {
   }, [divHeight])
   console.log(divHeight)
   return (
-    <section ref={ref} className="About">
+    <section ref={ref} className="About" id="about">
       <SideTag height={divHeight} name="about" side="left" />
       <Container className="About-container">
         <Row className="About-main-section">

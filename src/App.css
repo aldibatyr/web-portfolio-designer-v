@@ -760,7 +760,7 @@
   line-height: 0;
   position: absolute;
   left: -200px;
-  bottom: 75px;
+  bottom: 150px;
   color: #707070;
   transform: rotate(270deg);
 }
@@ -799,35 +799,41 @@
   font-family: "Playfair Display", "serif";
 }
 
-.Work-ethics-column .Work-ethics-image {
-  width: 100%;
-  overflow: hidden;
+.Work-ethics-column .Work-ethics-image-wrapper {
   position: relative;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.315);
 }
-.Work-ethics-column .Work-ethics-image .Left-text {
+.Work-ethics-column .Work-ethics-image-wrapper .Left-text {
   margin: 0;
   padding: 0;
   line-height: 0;
   position: absolute;
   left: 0;
-  bottom: 0;
+  top: -30px;
   color: #707070;
-  transform: rotate(270deg);
+  z-index: 3;
 }
-.Work-ethics-column .Work-ethics-image .Left-text h3 {
+.Work-ethics-column .Work-ethics-image-wrapper .Left-text h3 {
+  font-family: "Playfair Display", "serif";
   font-size: 2.5rem;
 }
-.Work-ethics-column .Work-ethics-image .Right-text {
+.Work-ethics-column .Work-ethics-image-wrapper .Right-text {
+  z-index: 3;
   position: absolute;
-  right: -120px;
-  top: 75px;
-  transform: rotate(90deg);
+  right: -50px;
+  bottom: -30px;
   color: #707070;
 }
-.Work-ethics-column .Work-ethics-image .Right-text h3 {
+.Work-ethics-column .Work-ethics-image-wrapper .Right-text h3 {
+  font-family: "Playfair Display", "serif";
   font-size: 2.5rem;
 }
-.Work-ethics-column .Work-ethics-image img {
+.Work-ethics-column .Work-ethics-image-wrapper .Work-ethics-image {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.Work-ethics-column .Work-ethics-image-wrapper .Work-ethics-image img {
   width: 200%;
 }
 
@@ -850,6 +856,57 @@
 }
 .Work-ethics-text-box p {
   font-family: "Playfair Display", serif;
+}
+
+.Image-wrapper {
+  max-width: 100%;
+  position: relative;
+}
+.Image-wrapper .Top-text {
+  position: absolute;
+  top: -30px;
+  left: 0;
+  font-family: "Playfair Display", serif;
+  color: #707070;
+}
+.Image-wrapper .Top-text h3 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+.Image-wrapper .Bottom-text {
+  position: absolute;
+  bottom: -30px;
+  right: 0;
+  font-family: "Playfair Display", serif;
+  color: #707070;
+}
+.Image-wrapper .Bottom-text h3 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+.Image-wrapper .Image {
+  margin: 50px 0;
+}
+.Image-wrapper .Image img {
+  width: 100%;
+}
+
+.Two-column-row {
+  margin: 100px 0;
+}
+
+.horizontal-line {
+  display: inline-block;
+  width: 100px;
+  border-top: 1px solid #1f1f1f;
+}
+
+.text-box {
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+  font-family: "Playfair Display", serif;
+  box-shadow: 3px 6px 6px #00000060;
 }
 
 /*# sourceMappingURL=App.css.map */
