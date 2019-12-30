@@ -117,119 +117,39 @@
             }
         }
 
+        .Red-text {
+            color: $palered !important;
+            text-decoration: underline;
+        }
+
+        
+
+        .Text-box-hero {
+            h1 {
+                font-size: 4rem;
+            }
+        }
+
         .Hero {
-            margin-bottom: 0;
-            margin-top: 100px;
+
+            margin: 100px 0;
             width: 100%;
+
             .Hero-row {
                 color: #1e1e1e;
-                font-family: 'Playfair Display', serif;
-
-                .Hero-hello-col {
-
-                    // padding-top: 150px;
-                    .Text-box-hello {
-                        margin-top: 100px;
-                        position: relative;
-                        width: 280px;
-                        height: 180px;
-                        background-color: $beige;
-                        z-index: 2;
-
-                        @media screen and (max-width: 450px) {
-                            width: 150px;
-                            height: 100px;
-                        }
-
-                        .Hello-h1 {
-                            transform: translateX(80px);
-
-                            @media screen and (max-width: 450px) {
-                                transform: translateX(5px);
-                            }
-
-                            .Hello-span {
-                                font-size: 4rem;
-
-                                @media screen and (max-width: 450px) {
-                                    font-size: 2rem;
-                                }
-                            }
-                        }
-
-                        .My-name-h1 {
-                            width: 150%;
-
-                            @media screen and (max-width: 450px) {
-                                width: 100%;
-                            }
-
-                            .My-name-span {
-                                font-size: 4rem;
-
-                                @media screen and (max-width: 450px) {
-                                    font-size: 2rem;
-                                }
-                            }
-                        }
-                    }
-
-                    .Text-box-is {
-                        position: relative;
-                        width: 40%;
-                        height: 140px;
-                        background-color: $beige;
-                        transform: translate(250px, -100px);
-                        z-index: 1;
-
-                        @media screen and (max-width: 450px) {
-                            transform: translate(120px, -80px)
-                        }
-
-                        .Is-h1 {
-                            position: relative;
-
-                            .Is-span {
-                                position: absolute;
-                                top: -30px;
-                                right: 0;
-                                font-size: 8rem;
-                            }
-                        }
-                    }
-
-                    .Text-box-Aldiyar {
-                        position: relative;
-                        z-index: 3;
-                        box-shadow: 0px 3px 6px #00000098;
-                        width: 80%;
-                        height: 180px;
-                        background-color: $beige;
-                        margin: 0 auto;
-                        transform: translateY(-120px);
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-
-                        .Aldiyar-h1 {
-                            .Aldiyar-span {
-                                font-size: 7rem;
-                                color: $palered;
-
-                                @media screen and (max-width: 450px) {
-                                    font-size: 5rem;
-                                }
-                            }
-                        }
-                    }
-                }
+                font-family: 'Montserrat', sans-serif;
+                margin: 0 auto;
+                color: $darktext;
+                text-align: center;
+            }
 
                 .Contact-button-col {
-                    @media screen and (max-width: 450px) {
-                        margin-bottom: 30px;
-                    }
+                    // @media screen and (max-width: 450px) {
+                    //     margin-bottom: 30px;
+                    // }
 
                     .Contact-button-wrapper {
+                        padding: 100px;
                         height: 100%;
                         display: flex;
                         justify-content: center;
@@ -303,69 +223,7 @@
                     }
                 }
 
-                .Hero-I-am-col {
-                    .Hero-text-wrapper {
-                        margin-top: 100px;
-
-                        @media screen and (max-width: 450px) {
-                            // margin: 0 auto;
-                            // width: 80%;
-                        }
-
-                        .I-am-wrapper {
-                            .I-am-box {
-                                position: relative;
-                                z-index: 2;
-                                height: 350px;
-                                width: 100px;
-                                background-color: $beige;
-                                text-align: center;
-
-                                span {
-                                    line-height: 1.1;
-                                    margin: 0;
-                                    font-size: 120px;
-                                    display: block;
-                                }
-
-                                .Smaller-text {
-                                    font-size: 60px;
-                                }
-                            }
-
-                            .Web-dev-box {
-                                height: 416px;
-                                width: 250px;
-                                margin: 0;
-                                background-color: $beige;
-                                transform: translate(50px, -300px);
-
-                                .Web-dev-text-wrapper {
-                                    text-align: center;
-                                    width: 60%;
-                                    margin-left: 30%;
-
-                                    span {
-                                        display: block;
-                                        line-height: 1.1;
-                                        font-size: 5.25rem;
-                                    }
-
-                                    .Underlined-colored {
-                                        color: $palered;
-
-                                        .line {
-                                            width: 110%;
-                                            border-top: 2px solid $dark;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
             }
-        }
 
         .Stitch {
             position: relative;
@@ -425,7 +283,6 @@
 
         .About {
             height: 100%;
-            background-color: $palewhite;
 
             .About-container {
                 .About-main-section {
@@ -433,30 +290,34 @@
                         padding-top: 100px;
                         font-family: 'Playfair Display', serif;
 
-                        div {
+                        .Technologies {
+                            margin: 0 auto;
                             background-color: $beige;
                             padding: 5px 10px;
-                        }
-
-                        .Technologies {
                             position: relative;
                             z-index: 3;
-                            width: 230px;
-                            margin-left: 70px;
-                            height: 140px;
                             box-shadow: -5px 3px 6px #00000023;
                         }
 
                         .Personal-info {
+                            background-color: $beige;
+                            padding: 5px 10px;
                             width: 100px;
-                            transform: translateY(-20px);
+                            margin: 0 auto;
+                            transform: translateY(75px);
                         }
 
                         .Personal-info-big {
+                            margin: 100px 0;
+                            background-color: $beige;
+                            padding: 5px 10px;
                             position: relative;
                             z-index: 2;
                             box-shadow: -2px -2px 6px rgba(0, 0, 0, 0.274);
-                            transform: translate(10px, -35px);
+
+                            @media screen and (max-width: 320px) {
+                                transform: translate(0px, -35px);
+                            }
                         }
                     }
 
@@ -548,7 +409,7 @@
                                         position: absolute;
                                         z-index: -1;
                                         background-color: $beige;
-                                        width: 100%;
+                                        width: 95%;
                                         height: 100%;
                                         top: 50%;
                                         left: 50%;
@@ -620,7 +481,7 @@
 
                                 .Right-text {
                                     position: absolute;
-                                    right: -240px;
+                                    right: -220px;
                                     top: 150px;
                                     transform: rotate(90deg);
                                     color: $darktext;
@@ -855,7 +716,7 @@
 
         .Form-and-animations-column {
             position: relative;
-            margin: 100px 0;
+            margin: 150px 0;
 
             .Form-container {
                 position: relative;
@@ -867,7 +728,7 @@
                     line-height: 0;
                     position: absolute;
                     left: -200px;
-                    bottom: 150px;
+                    bottom: 60px;
                     color: $darktext;
                     transform: rotate(270deg);
 
@@ -901,7 +762,7 @@
                     position: absolute;
                     z-index: -1;
                     background-color: $beige;
-                    width: 100%;
+                    width: 95%;
                     height: 100%;
                     top: 50%;
                     left: 50%;
@@ -939,7 +800,7 @@
                 .Right-text {
                     z-index: 3;
                     position: absolute;
-                    right: -50px;
+                    right: 0;
                     bottom: -30px;
                     color: $darktext;
 
@@ -972,7 +833,7 @@
                 position: absolute;
                 z-index: -1;
                 background-color: $beige;
-                width: 100%;
+                width: 95%;
                 height: 100%;
                 top: 50%;
                 left: 50%;
@@ -1053,59 +914,82 @@
             width: 80%;
         }
 
+        .Projects {
+            margin: 100px auto;
+        }
+
+        .Project-row {
+            margin: 150px auto;
+            @media screen and (max-width: 576px) {
+                margin: 50px auto;
+            }
+        }
 
         .Project {
-            background-color: #fff;
-            margin: 100px auto;
+            background: $darktext;
+            @media screen {
+                margin: 25px 0;
+            }
             .Title {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                font-family: 'Montserrat' sans-serif;
+                font-family: 'Montserrat'sans-serif;
                 color: $yellow;
+                text-align: center;
                 h1 {
+                    display: block;
                     line-height: 1;
-                    font-size: 180px;
+                    font-size: 5rem;
+                    @media screen and (max-width: 500px) {
+                        font-size: 4rem;
+                    }
                 }
             }
+
             .divider {
                 width: 100%;
+
                 .line {
                     display: block;
                     width: 80%;
-                    border-top: 2px solid $darktext;
+                    border-top: 2px solid $yellow;
                     margin: 0 auto;
                 }
             }
+
             .description-wrapper {
                 width: 100%;
+
                 .description {
                     font-family: 'Playfair Display', serif;
                     width: 70%;
                     margin: 20px auto;
                 }
             }
+
             .links-to-repos {
-                width: 60%;
+                width: 70%;
                 margin: 0 auto;
                 display: flex;
                 justify-content: center;
                 transform: translateY(50px);
-                
+
                 .link-wrapper {
                     width: 33.3%;
                     display: inline-block;
                     box-shadow: 0 -6px 6px rgba(0, 0, 0, 0.123);
                     transition: 0.2s all ease-in-out;
+
                     &:hover {
                         transform: translateY(-5px);
                         box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.123);
                     }
+
                     div {
                         padding: 20px 10px;
                         height: 100px;
+
                         a {
                             text-decoration: none;
+
                             span {
                                 display: block;
                                 color: $light;
@@ -1113,8 +997,10 @@
                             }
                         }
                     }
+
                     .front-end {
                         background-color: $beige;
+
                         a {
                             span {
                                 color: $darktext;
@@ -1122,11 +1008,70 @@
                         }
 
                     }
+
                     .back-end {
                         background-color: $palewhite;
                     }
+
                     .live-example {
                         background-color: $palered;
+                    }
+                }
+            }
+        }
+
+        .technologies-wrapper {
+            margin: 100px auto;
+            // display: flex;
+            // justify-content: center;
+            // align-items: center;
+            @media screen and (max-width: 576px) {
+                margin-bottom: 20px;
+            }
+
+            .technologies-box {
+                width: 100%;
+                display: flex;
+
+                div {
+                    width: 50%;
+                    padding: 10px 5px;
+                    position: relative;
+
+                    .title {
+                        text-align: center;
+                        width: 200px;
+                        font-family: 'Montserrat', sans-serif;
+                        color: $darktext;
+                    }
+
+                    ul {
+                        margin: 0 !important;
+
+                        li {
+                            list-style: none;
+                            font-family: 'Playfair Display', serif;
+                        }
+                    }
+                }
+
+                .front-end {
+                    background-color: $beige;
+
+                    .title {
+                        position: absolute;
+                        top: -35px;
+                        left: -40px;
+                    }
+                }
+
+                .back-end {
+                    background-color: $palewhite;
+
+                    .title {
+                        position: absolute;
+                        top: -35px;
+                        right: -40px;
                     }
                 }
             }

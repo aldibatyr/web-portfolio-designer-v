@@ -20,7 +20,7 @@ const Skills = () => {
       <div className="Skills-full-screen">
         <Container className="Skills-main-content">
           <Row className="Three-column-row">
-            <Col xs={12} lg={4} className="Social-media-column">
+            <Col lg={4} className="Social-media-column">
               <div className="Social-media-text">
                 <div className="Text-box">
                   <p>At Mojo Hookah Lounge, with the help of the most awesome team I have worked with *yet*. We created the YouTube channel that is constantly growing. You can check it by following the link:</p>
@@ -29,7 +29,7 @@ const Skills = () => {
                     <span className="underline"></span>
                   </div>
                   <p>I learned to express my thoughts on camera, organize the projects, and create content.</p>
-                  <p>Managerial skills were also obtained vwhile at Mojo Hookah Lounge.</p>
+                  <p>Managerial skills were also obtained while at Mojo Hookah Lounge.</p>
                 </div>
               </div>
               <span className='Pointer' ></span>
@@ -42,7 +42,7 @@ const Skills = () => {
                 </div>
               </div>
             </Col>
-            <Col xs={12} lg={4} className="Form-and-animations-column">
+            <Col lg={4} className="Form-and-animations-column">
               <div className="Form-container">
                 <div className="Left-text"><h3>INTERACTIVE FORMS</h3></div>
                 <div className="Right-text"><h3>ANIMATIONS</h3></div>
@@ -55,7 +55,7 @@ const Skills = () => {
                 <p>Animations come in handy for this application.</p>
               </div>
             </Col>
-            <Col xs={12} lg={4} className="Work-ethics-column">
+            <Col lg={4} className="Work-ethics-column">
               <div className="Work-ethics-image-wrapper">
                 <div className="Left-text"><h3>WORK ETHICS</h3></div>
                 <div className="Right-text"><h3>DRIVE</h3></div>
@@ -71,7 +71,7 @@ const Skills = () => {
             </Col>
           </Row>
           <Row className='Two-column-row'>
-            <Col xs={12} lg={6} className="Right-column">
+            <Col lg={6} className="Right-column">
               <div className="Image-wrapper">
                 <div className="Top-text"><h3>mobile first design</h3></div>
                 <div className="Bottom-text"><h3>responsive design</h3></div>
@@ -80,7 +80,7 @@ const Skills = () => {
                 </div>
               </div>
             </Col>
-            <Col xs={12} lg={6} className="Left-column">
+            <Col lg={6} className="Left-column">
               <div className="text-box-wrapper">
                 <div className="text-box">
                   <p>Todays media consumption medium calls for a solution that is not only informative, but looks great on multiple devices. By implementing responsive and mobile first design we are able to achieve a better conversion rate.</p>
@@ -89,7 +89,7 @@ const Skills = () => {
             </Col>
           </Row>
           <Row className="Two-column-row">
-            <Col xs={12} lg={6} className="Left-column">
+            <Col lg={6} className="Left-column">
               <div className="text-box-wrapper">
                 <div className="text-box smaller">
                   <p>I am currently working on mobile development skills by creating hybrid and PWA</p>
@@ -97,7 +97,7 @@ const Skills = () => {
               </div>
 
             </Col>
-            <Col xs={12} lg={6} className="Right-column">
+            <Col lg={6} className="Right-column">
               <div className="Image-wrapper">
                 <div className="Bottom-text"><h3>mobile applications</h3></div>
                 <div className="Image">

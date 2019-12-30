@@ -1,4 +1,4 @@
-import React, {useState, useLayoutEffect, useRef} from 'react'
+import React, { useState, useLayoutEffect, useRef } from 'react'
 import SideTag from './SideTag'
 import { Row, Col, Container } from 'react-bootstrap'
 import BAO from '../Assets/BAO-almaty-image.jpg'
@@ -16,15 +16,17 @@ const About = () => {
     <section ref={ref} className="About" id="about">
       <Container className="About-container">
         <Row className="About-main-section">
-          <Col md={6} lg={4} xs={12} className="About-text">
-            <div className="Technologies">
-              <p>I specialize in REACT, GSAP, SCROLLMAGIC, RESPONSIVE WEB DESIGN, NODEJS, EXPRESS, POSTGRESQL.</p>
-            </div>
-            <div className="Personal-info">
-              <p>
-                I am also fluent in 3 spoken languages: KAZAKH, RUSSIAN, AND ENGLISH.
-              </p>
-            </div>
+          <Col md={6} lg={4} className="About-text">
+            <Row className="Top-row">
+              <Col className="Technologies" xs={5}>
+                <p>I specialize in REACT, GSAP, SCROLLMAGIC, RESPONSIVE WEB DESIGN, NODEJS, EXPRESS, POSTGRESQL.</p>
+              </Col>
+              <Col className="Personal-info" xs={3}>
+                <p>
+                  I am also fluent in 3 spoken languages: KAZAKH, RUSSIAN, AND ENGLISH.
+                </p>
+              </Col>
+            </Row>
             <div className="Personal-info-big">
               <div className="Text-one">
                 <p>For the past 8 years I have lived in Los Angeles, CA.</p>
@@ -37,7 +39,7 @@ const About = () => {
               </div>
             </div>
           </Col>
-          <Col xs={12} md={6} lg={8} className="About-images">
+          <Col md={6} lg={8} className="About-images">
             <div className="image-wrapper top">
               <div className="vertical image">
                 <img src={BAO} alt="Big Almaty Lake" />
