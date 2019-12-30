@@ -1,5 +1,4 @@
 import React, { useState, useLayoutEffect, useRef } from 'react'
-import SideTag from './SideTag'
 import { Row, Col, Container } from 'react-bootstrap'
 import BAO from '../Assets/BAO-almaty-image.jpg'
 import LA from '../Assets/los-angeles.jpg'
