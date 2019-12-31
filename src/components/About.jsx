@@ -13,14 +13,14 @@ const About = () => {
   console.log(divHeight)
   return (
     <section ref={ref} className="About" id="about">
-      <Container className="About-container">
+      <div className="About-container">
         <Row className="About-main-section">
-          <Col md={6} lg={4} className="About-text">
+          <Col md={6} lg={5} className="About-text">
             <Row className="Top-row">
               <Col className="Technologies" xs={5}>
                 <p>I specialize in REACT, GSAP, SCROLLMAGIC, RESPONSIVE WEB DESIGN, NODEJS, EXPRESS, POSTGRESQL.</p>
               </Col>
-              <Col className="Personal-info" xs={3}>
+              <Col className="Personal-info" xs={4}>
                 <p>
                   I am also fluent in 3 spoken languages: KAZAKH, RUSSIAN, AND ENGLISH.
                 </p>
@@ -38,7 +38,7 @@ const About = () => {
               </div>
             </div>
           </Col>
-          <Col md={6} lg={8} className="About-images">
+          <Col md={6} lg={7} className="About-images">
             <div className="image-wrapper top">
               <div className="vertical image">
                 <img src={BAO} alt="Big Almaty Lake" />
@@ -54,7 +54,7 @@ const About = () => {
             </div>
           </Col>
         </Row>
-      </Container>
+      </div>
     </section>
   )
 }

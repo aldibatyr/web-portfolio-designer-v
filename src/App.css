@@ -1,17 +1,41 @@
-.Logo-box {
-  width: 80%;
-  margin: 0 10%;
-  display: flex;
-  position: absolute;
-  top: 0;
-  justify-content: center;
+.navigation {
+  width: 320px;
+  margin: 0 auto;
 }
+.navigation div {
+  display: inline-block;
+  width: 33.3%;
+}
+.navigation .link-box {
+  text-align: center;
+}
+.navigation .link-box:hover a {
+  color: #EDE511;
+}
+.navigation .link-box:hover .underline {
+  width: 90%;
+  margin: 0 auto;
+}
+.navigation .link-box a {
+  transition: 0.2s color ease-in-out;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  color: #9A5151;
+}
+.navigation .link-box .underline {
+  display: block;
+  width: 0;
+  border-top: 2px solid #EDE511;
+  transition: 0.3s all ease-in-out;
+}
+
 .Logo-box a {
   text-decoration: none !important;
 }
 .Logo-box .Logo-text-wrapper {
-  width: 200px;
-  height: 50px;
+  width: 100px;
+  height: 40px;
   background-color: #FFFFFF;
   text-align: center;
   transition: 0.3s ease-in-out;
@@ -19,79 +43,11 @@
 .Logo-box .Logo-text-wrapper:hover {
   background-color: #FCF1E1;
 }
-.Logo-box .Logo-text-wrapper h1 {
+.Logo-box .Logo-text-wrapper span {
   font-family: "Playfair Display", serif;
   color: #1c1c1c;
   text-decoration: none;
-}
-
-.Navigation-wrapper {
-  width: 50px;
-  height: 100%;
-  min-height: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 1;
-}
-.Navigation-wrapper .Navigation {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-.Navigation-wrapper .Navigation .Link-to-section {
-  height: 20%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  transition: 0.2s all ease-in;
-}
-.Navigation-wrapper .Navigation .Link-to-section:hover {
-  transform: translateX(2px);
-  background-color: #EDE511;
-  box-shadow: 0px 4px 8px #363434a2;
-}
-.Navigation-wrapper .Navigation .Link-to-section .text {
-  color: #9A5151;
-  font-family: "Montserrat", "sans-serif";
-  transform: rotate(90deg);
-  position: relative;
-}
-.Navigation-wrapper .Navigation .Link-to-section .text .overlay {
-  transform: rotate(90deg);
-  height: 20px;
-  width: 10px;
-  background-color: #EDE511;
-}
-
-.Navigation-smaller-than-laptop-box {
-  position: absolute;
-  top: 0;
-  height: 50px;
-  width: 100vw;
-}
-.Navigation-smaller-than-laptop-box .Navigation-smaller-than-laptop-nav {
-  height: 100%;
-  width: 100%;
-  display: flex;
-}
-.Navigation-smaller-than-laptop-box .Navigation-smaller-than-laptop-nav .hamburger {
-  background-color: transparent;
-  border: none;
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  z-index: 2;
-  width: 30px;
-  height: 30px;
-}
-.Navigation-smaller-than-laptop-box .Navigation-smaller-than-laptop-nav .hamburger .bar {
-  display: block;
-  margin-bottom: 3px;
-  width: 20px;
-  border: 0.5px solid #FCF1E1;
+  font-size: 1.5rem;
 }
 
 .Red-text {
@@ -101,6 +57,11 @@
 
 .Text-box-hero h1 {
   font-size: 4rem;
+}
+@media screen and (max-width: 576px) {
+  .Text-box-hero h1 {
+    font-size: 3.5rem;
+  }
 }
 
 .Hero {
@@ -116,7 +77,6 @@
 }
 .Hero .Contact-button-col .Contact-button-wrapper {
   padding: 100px;
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -231,29 +191,65 @@
 .About .About-container .About-main-section .About-text {
   padding-top: 100px;
   font-family: "Playfair Display", serif;
+  padding: 10px 20px;
+  color: #707070;
 }
 .About .About-container .About-main-section .About-text .Technologies {
-  margin: 0 auto;
-  background-color: #FCF1E1;
-  padding: 5px 10px;
+  margin: 50px auto;
+  border-radius: 10px;
+  padding: 10px 10px;
   position: relative;
   z-index: 3;
-  box-shadow: -5px 3px 6px #00000023;
+  box-shadow: -5px 3px 20px #00000023, 5px -3px 20px rgba(175, 175, 175, 0.308);
+}
+.About .About-container .About-main-section .About-text .Technologies::after {
+  content: "";
+  width: 110%;
+  height: 110%;
+  position: absolute;
+  border-radius: 15px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: inset 5px 3px 20px #00000023, inset -5px -3px 20px rgba(175, 175, 175, 0.308);
 }
 .About .About-container .About-main-section .About-text .Personal-info {
-  background-color: #FCF1E1;
-  padding: 5px 10px;
-  width: 100px;
+  border-radius: 10px;
+  padding: 10px 10px;
+  position: relative;
   margin: 0 auto;
   transform: translateY(75px);
+  box-shadow: -5px 3px 20px #00000023, 5px -3px 20px rgba(175, 175, 175, 0.308);
+}
+.About .About-container .About-main-section .About-text .Personal-info::after {
+  content: "";
+  width: 110%;
+  height: 110%;
+  position: absolute;
+  border-radius: 15px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: inset -5px 3px 20px #00000023, inset 5px -3px 20px rgba(175, 175, 175, 0.308);
 }
 .About .About-container .About-main-section .About-text .Personal-info-big {
-  margin: 100px 0;
-  background-color: #FCF1E1;
-  padding: 5px 10px;
+  margin: 150px auto;
+  padding: 10px 10px;
   position: relative;
+  width: 80%;
   z-index: 2;
-  box-shadow: -2px -2px 6px rgba(0, 0, 0, 0.274);
+  box-shadow: -5px 3px 20px #00000023, 5px -3px 20px rgba(175, 175, 175, 0.308);
+}
+.About .About-container .About-main-section .About-text .Personal-info-big::after {
+  content: "";
+  width: 110%;
+  height: 110%;
+  position: absolute;
+  border-radius: 15px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: inset -5px 3px 20px #00000023, inset 5px -3px 20px rgba(175, 175, 175, 0.308);
 }
 @media screen and (max-width: 320px) {
   .About .About-container .About-main-section .About-text .Personal-info-big {
@@ -305,6 +301,7 @@
 
 .Skills {
   height: 100%;
+  background: linear-gradient(#1c1c1c, #fff);
 }
 .Skills .Skills-full-screen {
   position: relative;
@@ -877,14 +874,14 @@
   width: 100%;
   display: flex;
 }
-.technologies-wrapper .technologies-box div {
+.technologies-wrapper .technologies-box > div {
   width: 50%;
   padding: 10px 5px;
   position: relative;
 }
 .technologies-wrapper .technologies-box div .title {
   text-align: center;
-  width: 200px;
+  width: 100%;
   font-family: "Montserrat", sans-serif;
   color: #707070;
 }
@@ -900,16 +897,93 @@
 }
 .technologies-wrapper .technologies-box .front-end .title {
   position: absolute;
-  top: -35px;
-  left: -40px;
+  top: -24px;
+  left: 0;
 }
 .technologies-wrapper .technologies-box .back-end {
   background-color: #a8a7a7;
 }
 .technologies-wrapper .technologies-box .back-end .title {
   position: absolute;
-  top: -35px;
-  right: -40px;
+  top: -24px;
+  right: 0;
+}
+
+.App-footer {
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+}
+.App-footer .logo-quarter {
+  height: 100%;
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1c1c1c;
+  font-family: "Playfair Display", serif;
+  color: #707070;
+  font-size: 4rem;
+}
+@media screen and (max-width: 576px) {
+  .App-footer .logo-quarter {
+    width: 100%;
+  }
+}
+.App-footer .social-media-column {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.App-footer .social-media-column .icon-box {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  border: 3px solid #707070;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+.App-footer .social-media-column .icon-box:hover .overlay {
+  transform: translate(-50%, -50%);
+}
+.App-footer .social-media-column .icon-box .overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #EDE511;
+  z-index: 2;
+  transform: translate(-50%, 50%);
+  transition: 0.3s ease-in-out;
+}
+.App-footer .social-media-column .icon-box a {
+  z-index: 3;
+  text-decoration: none;
+  color: #707070;
+}
+.App-footer .social-media-column .icon-box a svg {
+  height: 50px;
+  width: 50px;
+}
+.App-footer .thank-you {
+  font-family: "Playfair";
+  text-align: right;
+  font-size: 3rem;
+  color: #a8a7a7;
+}
+
+.Contact-container .text-wrapper .header {
+  width: 50%;
+  min-width: 300px;
+  color: #707070;
+  margin: 200px auto;
+  text-align: center;
 }
 
 /*# sourceMappingURL=App.css.map */

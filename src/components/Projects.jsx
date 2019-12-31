@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap'
 
 const Projects = () => {
   return (
-    <Container as="section" className="Projects">
+    <Container as="section" className="Projects" id="projects">
       <Row className="Project-row">
         <Col lg={7}>
           <div className="Project">
