@@ -7,7 +7,7 @@ const Index = () => {
   return (
     <>
       <Hero />
-      <Stitch name="projects" />
+      {/* <Stitch name="projects" /> */}
       <Projects />
     </>
   )

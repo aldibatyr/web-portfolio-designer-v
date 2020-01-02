@@ -28,6 +28,7 @@ const Projects = () => {
                   </a>
                 </div>
               </div>
+              <div className="divider-vertical"></div>
               <div className="link-wrapper">
                 <div className="back-end">
                   <a href="https://github.com/thinkful-ei-dragonfly/vkuss-server-aldiyar" rel="noopener noreferrer" target="_blank">
@@ -37,6 +38,7 @@ const Projects = () => {
                   </a>
                 </div>
               </div>
+              <div className="divider-vertical"></div>
               <div className="link-wrapper">
                 <div className="live-example">
                   <a href="https://aldibatyrbekov-vkuss-app.now.sh" rel="noopener noreferrer" target="_blank">
@@ -133,6 +135,7 @@ const Projects = () => {
                   </a>
                 </div>
               </div>
+              <div className="divider-vertical"></div>
               <div className="link-wrapper">
                 <div className="back-end">
                   <a href="https://github.com/aldibatyr/waitline-server" rel="noopener noreferrer" target="_blank">
@@ -142,6 +145,7 @@ const Projects = () => {
                   </a>
                 </div>
               </div>
+              <div className="divider-vertical"></div>
               <div className="link-wrapper">
                 <div className="live-example">
                   <a href="http://waitline.now.sh" rel="noopener noreferrer" target="_blank">
@@ -178,6 +182,7 @@ const Projects = () => {
                   </a>
                 </div>
               </div>
+              <div className="divider-vertical"></div>
               <div className="link-wrapper">
                 <div className="back-end">
                   <a href="https://github.com/thinkful-ei-dragonfly/JobReel-server" rel="noopener noreferrer" target="_blank">
@@ -187,6 +192,7 @@ const Projects = () => {
                   </a>
                 </div>
               </div>
+              <div className="divider-vertical"></div>
               <div className="link-wrapper">
                 <div className="live-example">
                   <a href="http://jobreel.now.sh" rel="noopener noreferrer" target="_blank">
@@ -284,6 +290,7 @@ const Projects = () => {
                   </a>
                 </div>
               </div>
+              <div className="divider-vertical"></div>
               <div className="link-wrapper">
                 <div className="back-end">
                   <a href="https://github.com/thinkful-ei-dragonfly/spaced-rep-api-aldiyar-jonathan" rel="noopener noreferrer" target="_blank">
@@ -293,6 +300,7 @@ const Projects = () => {
                   </a>
                 </div>
               </div>
+              <div className="divider-vertical"></div>
               <div className="link-wrapper">
                 <div className="live-example">
                   <a href="https://aldiyar-jonathan-spaced-repetition.now.sh/" rel="noopener noreferrer" target="_blank">

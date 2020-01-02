@@ -3,9 +3,12 @@
         $yellow: #EDE511;
         $palered: #9A5151;
         $palewhite: #a8a7a7;
-        $darktext: #707070;
+        $darktext: #0D0F11;
         $break-handheld: 1024px;
-        $light: rgb(219, 219, 219);
+        $light: #eeeeee;
+        $shadow-property: 6px 6px 16px #d1cdd780,
+        -6px -6px 16px #ffffff80;
+        @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
 
         .navigation {
             width: 320px;
@@ -20,9 +23,6 @@
                 text-align: center;
 
                 &:hover {
-                    a {
-                        color: $yellow;
-                    }
 
                     .underline {
                         width: 90%;
@@ -42,7 +42,7 @@
                 .underline {
                     display: block;
                     width: 0;
-                    border-top: 2px solid $yellow;
+                    border-top: 2px solid $palered;
                     transition: 0.3s all ease-in-out;
                 }
             }
@@ -57,18 +57,11 @@
             .Logo-text-wrapper {
                 width: 100px;
                 height: 40px;
-                background-color: #FFFFFF;
                 text-align: center;
 
-                &:hover {
-                    background-color: $beige;
-                }
-
-                transition: 0.3s ease-in-out;
-
                 span {
-                    font-family: 'Playfair Display', serif;
-                    color: #1c1c1c;
+                    font-family: 'Montserrat', sans-serif;
+                    color: $darktext;
                     text-decoration: none;
                     font-size: 1.5rem;
                 }
@@ -121,10 +114,13 @@
                         flex-direction: row;
                         width: 120px;
                         height: 50px;
-                        background-color: $palered;
+                        background-color: $light;
+                        border-radius: 50px;
+                        box-shadow: 6px 6px 16px #d1cdd780,
+                            -6px -6px 16px #ffffff80;
                         overflow: hidden;
                         border: none;
-                        color: $beige;
+                        color: $darktext;
                         font-size: 1rem;
                         transition: 0.15s color ease-in-out;
 
@@ -133,7 +129,7 @@
 
                             .Contact-button-arrow {
                                 .Arrow-body {
-                                    width: 30px;
+                                    width: 20px;
                                     border: 0.5px solid $dark;
                                 }
 
@@ -148,6 +144,7 @@
                             display: flex;
                             justify-content: flex-start;
                             align-items: center;
+                            margin-left: 10px;
 
                             p {
                                 margin: 0;
@@ -170,20 +167,44 @@
                                 display: block;
                                 height: 1px;
                                 width: 10px;
-                                border: $beige 0.5px solid;
+                                border: $darktext 0.5px solid;
                                 transition: 0.3s width ease-in-out;
                             }
 
                             .Arrow-triangle {
                                 border-top: 3px solid transparent;
                                 border-bottom: 3px solid transparent;
-                                border-left: 5px solid $beige;
+                                border-left: 5px solid $darktext;
                             }
                         }
                     }
                 }
             }
 
+        }
+
+        .add-text {
+            width: 300px;
+            margin: 0 auto;
+            text-align: center;
+            background-color: $light;
+            box-shadow: $shadow-property;
+            font-family: 'Poppins', sans-serif;
+            padding: 10px 5px;
+            border-radius: 30px;
+        }
+
+        .chevron-box {
+            margin: 0 auto;
+            box-shadow: 2px 2px 2px #8b8b8b, -2px -2px 2px #ffffff;
+            width: 30px;
+            height: 30px;
+            border-radius: 30px;
+            background-color: $darktext;
+            svg {
+                transform: translateY(5px);
+                color: $light;
+            }
         }
 
         .Stitch {
@@ -209,36 +230,8 @@
                     opacity: 0.15;
                     text-transform: uppercase;
                     font-size: 5.25rem;
-                    font-family: 'Playfair Display', serif;
+                    font-family: 'Poppins', sans-serif;
                 }
-            }
-        }
-
-        .Side-tag {
-            width: 50px;
-            position: absolute;
-
-            h3 {
-                font-family: 'Montserrat', 'sans-serif';
-                color: $darktext;
-                text-transform: uppercase;
-                margin-top: 100px;
-            }
-        }
-
-        #left {
-            left: 0;
-
-            h3 {
-                transform: rotate(270deg);
-            }
-        }
-
-        #right {
-            right: 0;
-
-            h3 {
-                transform: rotate(90deg);
             }
         }
 
@@ -249,7 +242,7 @@
                 .About-main-section {
                     .About-text {
                         padding-top: 100px;
-                        font-family: 'Playfair Display', serif;
+                        font-family: 'Poppins', sans-serif;
                         padding: 10px 20px;
                         color: $darktext;
 
@@ -270,12 +263,12 @@
                                 top: 50%;
                                 left: 50%;
                                 transform: translate(-50%, -50%);
-                                box-shadow: inset 5px 3px 20px #00000023,
-                                    inset -5px -3px 20px rgba(175, 175, 175, 0.308);
+                                box-shadow: inset 5px 3px 6px #f708d723,
+                                    inset -5px -3px 6px rgba(204, 23, 159, 0.308);
                             }
 
-                            box-shadow: -5px 3px 20px #00000023,
-                            5px -3px 20px rgba(175, 175, 175, 0.308);
+                            box-shadow: -5px 3px 2px #f708d723,
+                            5px -3px 2px rgba(204, 23, 159, 0.308);
                         }
 
                         .Personal-info {
@@ -284,8 +277,8 @@
                             position: relative;
                             margin: 0 auto;
                             transform: translateY(75px);
-                            box-shadow: -5px 3px 20px #00000023,
-                                5px -3px 20px rgba(175, 175, 175, 0.308);
+                            box-shadow: -5px 3px 6px #f708d723,
+                                5px -3px 6px rgba(204, 23, 159, 0.308);
 
                             &::after {
                                 content: "";
@@ -296,8 +289,8 @@
                                 top: 50%;
                                 left: 50%;
                                 transform: translate(-50%, -50%);
-                                box-shadow: inset -5px 3px 20px #00000023,
-                                    inset 5px -3px 20px rgba(175, 175, 175, 0.308);
+                                box-shadow: inset -5px 3px 2px #f708d723,
+                                    inset 5px -3px 2px rgba(204, 23, 159, 0.308);
                             }
                         }
 
@@ -307,8 +300,8 @@
                             position: relative;
                             width: 80%;
                             z-index: 2;
-                            box-shadow: -5px 3px 20px #00000023,
-                                5px -3px 20px rgba(175, 175, 175, 0.308);
+                            box-shadow: -5px 3px 6px #f708d723,
+                                5px -3px 6px rgba(204, 23, 159, 0.308);
 
                             &::after {
                                 content: "";
@@ -319,8 +312,8 @@
                                 top: 50%;
                                 left: 50%;
                                 transform: translate(-50%, -50%);
-                                box-shadow: inset -5px 3px 20px #00000023,
-                                    inset 5px -3px 20px rgba(175, 175, 175, 0.308);
+                                box-shadow: inset -5px 3px 2px #f708d723,
+                                    inset 5px -3px 2px rgba(204, 23, 159, 0.308);
                             }
 
                             // &::before {
@@ -403,6 +396,7 @@
         .Skills {
             height: 100%;
             background: linear-gradient($dark, #fff);
+
             .Skills-full-screen {
                 position: relative;
                 margin: 0;
@@ -437,7 +431,7 @@
                                     }
 
                                     p {
-                                        font-family: 'Playfair Display', 'serif';
+                                        font-family: 'Poppins', sans-serif;
                                     }
 
                                     .Youtube-link {
@@ -480,7 +474,7 @@
                         .Social-media-image-box {
                             .image {
                                 position: relative;
-                                font-family: 'Playfair Display', 'serif';
+                                font-family: 'Poppins', sans-serif;
                                 width: 100%;
 
                                 .Left-text {
@@ -538,7 +532,7 @@
             background-color: $beige;
             width: 100%;
             display: block;
-            font-family: 'Playfair Display', 'serif';
+            font-family: 'Poppins', sans-serif;
             transition: 0.5s;
             box-shadow: 0px 9px 6px #00000033;
         }
@@ -739,7 +733,7 @@
 
             .Form-container {
                 position: relative;
-                font-family: 'Playfair Display', serif;
+                font-family: 'Poppins', sans-serif;
 
                 .Left-text {
                     margin: 0;
@@ -790,7 +784,7 @@
                 }
 
                 p {
-                    font-family: 'Playfair Display', 'serif';
+                    font-family: 'Poppins', sans-serif;
                 }
             }
         }
@@ -811,7 +805,7 @@
                     z-index: 3;
 
                     h3 {
-                        font-family: 'Playfair Display', 'serif';
+                        font-family: 'Poppins', sans-serif;
                         font-size: 2.5rem;
                     }
                 }
@@ -824,7 +818,7 @@
                     color: $darktext;
 
                     h3 {
-                        font-family: 'Playfair Display', 'serif';
+                        font-family: 'Poppins', sans-serif;
                         font-size: 2.5rem;
                     }
                 }
@@ -860,7 +854,7 @@
             }
 
             p {
-                font-family: 'Playfair Display', serif;
+                font-family: 'Poppins', sans-serif;
             }
         }
 
@@ -872,7 +866,7 @@
                 position: absolute;
                 top: -30px;
                 left: 0;
-                font-family: 'Playfair Display', serif;
+                font-family: 'Poppins', sans-serif;
                 color: $darktext;
 
                 h3 {
@@ -885,7 +879,7 @@
                 position: absolute;
                 bottom: -30px;
                 right: 0;
-                font-family: 'Playfair Display', serif;
+                font-family: 'Poppins', sans-serif;
                 color: $darktext;
 
                 h3 {
@@ -925,7 +919,7 @@
             width: 100%;
             padding: 10px;
             background-color: #fff;
-            font-family: 'Playfair Display', serif;
+            font-family: 'Poppins', sans-serif;
             box-shadow: 3px 6px 6px #00000060;
         }
 
@@ -946,7 +940,8 @@
         }
 
         .Project {
-            background: $darktext;
+            box-shadow: $shadow-property;
+            border-radius: 30px;
 
             @media screen {
                 margin: 25px 0;
@@ -954,7 +949,7 @@
 
             .Title {
                 font-family: 'Montserrat'sans-serif;
-                color: $yellow;
+                color: $palered;
                 text-align: center;
 
                 h1 {
@@ -974,7 +969,7 @@
                 .line {
                     display: block;
                     width: 80%;
-                    border-top: 2px solid $yellow;
+                    border-top: 2px solid $palered;
                     margin: 0 auto;
                 }
             }
@@ -983,10 +978,17 @@
                 width: 100%;
 
                 .description {
-                    font-family: 'Playfair Display', serif;
+                    font-family: 'Poppins', sans-serif;
                     width: 70%;
                     margin: 20px auto;
                 }
+            }
+            .divider-vertical {
+                width: 0.5%;
+                height: 70px;
+                margin-top: 15px;
+                background: linear-gradient( #eeeeee, #d3d1d1cb, #eeeeee);
+                border-radius: 0.5%;
             }
 
             .links-to-repos {
@@ -994,51 +996,53 @@
                 margin: 0 auto;
                 display: flex;
                 justify-content: center;
-                transform: translateY(50px);
-
+                
                 .link-wrapper {
-                    width: 33.3%;
+                    width: 33%;
                     display: inline-block;
-                    box-shadow: 0 -6px 6px rgba(0, 0, 0, 0.123);
-                    transition: 0.2s all ease-in-out;
-
-                    &:hover {
-                        transform: translateY(-5px);
-                        box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.123);
-                    }
+                    margin-bottom: 20px;
 
                     div {
                         padding: 20px 10px;
                         height: 100px;
-
+                        background-color: $light;
+                        text-align: center;
+                        transition: 0.3s all ease-in-out;
+                        &:hover {
+                            background-color: $palered;
+                            color: #eeeeee;
+                            a {
+                                span {
+                                    color: #eeeeee;
+                                }
+                            }
+                        }
                         a {
                             text-decoration: none;
 
                             span {
                                 display: block;
-                                color: $light;
-                                font-family: 'Playfair Display', serif;
+                                font-family: 'Poppins', sans-serif;
+                                color: $darktext;
                             }
                         }
                     }
 
                     .front-end {
-                        background-color: $beige;
 
-                        a {
-                            span {
-                                color: $darktext;
-                            }
-                        }
+                        border-radius: 50px 0px 0px 50px;
+                        box-shadow: -6px -6px 16px #ffffff80;
 
                     }
 
                     .back-end {
-                        background-color: $palewhite;
+
                     }
 
                     .live-example {
-                        background-color: $palered;
+                        border-radius: 0px 50px 50px 0px;
+                        box-shadow: 6px 6px 16px #d1cdd780;
+
                     }
                 }
             }
@@ -1057,7 +1061,8 @@
             .technologies-box {
                 width: 100%;
                 display: flex;
-
+                box-shadow: $shadow-property;
+                border-radius: 30px;
                 >div {
                     width: 50%;
                     padding: 10px 5px;
@@ -1077,13 +1082,13 @@
 
                         li {
                             list-style: none;
-                            font-family: 'Playfair Display', serif;
+                            font-family: 'Poppins', sans-serif;
                         }
                     }
                 }
 
                 .front-end {
-                    background-color: $beige;
+                    // background-color: $beige;
 
                     .title {
                         position: absolute;
@@ -1093,7 +1098,7 @@
                 }
 
                 .back-end {
-                    background-color: $palewhite;
+                    // background-color: $palewhite;
 
                     .title {
                         position: absolute;
@@ -1121,10 +1126,9 @@
                 justify-content: center;
                 align-items: center;
                 background-color: $dark;
-                font-family: 'Playfair Display',
-                serif;
+                font-family: 'Montserrat', sans-serif;
                 color: $darktext;
-                font-size: 4rem;
+                font-size: 3rem;
             }
 
             .social-media-column {
@@ -1176,9 +1180,9 @@
             }
 
             .thank-you {
-                font-family: 'Playfair';
+                font-family: 'Poppins', sans-serif;
                 text-align: right;
-                font-size: 3rem;
+                font-size: 2rem;
                 color: $palewhite;
             }
         }
