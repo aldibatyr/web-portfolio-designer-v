@@ -28,7 +28,7 @@ function App() {
           </Route>
         </Switch>
       </main>
-      <footer className="App-footer">
+      {/* <footer className="App-footer">
         <Col xs={12} md={3} className="logo-quarter">
           <div className="logo-text">
             <span>ALDIBA</span>
@@ -55,7 +55,7 @@ function App() {
         <Col xs={12} md={3} className="thank-you">
           <span>THANK YOU FOR STOPPING BY</span>
         </Col>
-      </footer>
+      </footer> */}
     </div>
   );
 }
