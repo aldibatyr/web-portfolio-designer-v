@@ -1,9 +1,11 @@
 import React from 'react'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import LinkCard from '../components/LinkCard';
 import { faGithub, faLinkedin, faInstagram, faYoutube, faTelegram } from '@fortawesome/free-brands-svg-icons';
 
 const Contact = () => {
+
+
   return (
     <section className="Contact-container">
       <div className="text-wrapper">
@@ -21,6 +23,7 @@ const Contact = () => {
           <LinkCard icon={faYoutube} href="https://www.youtube.com/channel/UCtK5rxP5E-FMU9LFpT9S4Rg" name="Mojo Hookah Lounge"/>
         </div>
       </div>
+
     </section>
   )
 }

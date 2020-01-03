@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import Form from '../components/Form';
+import ModalComponent from '../components/Modal';
 
 
 const Info = () => {
+
+  const [show, setShow] = useState(false);
+
   return (
     <Container>
       <Row>
@@ -200,17 +203,50 @@ const Info = () => {
             <p>Having seen a lot of things, I am dedicated to perform at the best possible state. I once promised myself to make a living in a new environment and up to this day doing my best to fulfill this promise</p>
           </div>
         </Col>
-        <Col></Col>
+        <Col xs={12} md={7}>
+          <div className="text-card">
+            <h1>Tech I know</h1>
+            <Row>
+              <Col xs={6}>
+                <h2>Front End</h2>
+                <ul>
+                  <li>HTML5</li>
+                  <li>CSS3</li>
+                  <li>JavaScript</li>
+                  <li>React</li>
+                  <li>GSAP</li>
+                  <li>ScrollMagic</li>
+                </ul>
+              </Col>
+              <Col>
+                <h2>Back End</h2>
+                <ul>
+                  <li>Node</li>
+                  <li>Express</li>
+                  <li>RESTful API creation</li>
+                  <li>JWT authentication</li>
+                  <li>PostgreSQL</li>
+                  <li>MongoDB</li>
+                  <li>Heroku</li>
+                </ul>
+              </Col>
+            </Row>
+          </div>
+        </Col>
       </Row>
       <Row>
         <div className="Contact-button-wrapper">
-            <button className="Contact-button">
-              <div className="Contact-button-text">
-                <p><b>contact</b></p>
-              </div>
-              <div className="Contact-button-arrow"><span className="Arrow-body"></span><span className="Arrow-triangle"></span></div>
-            </button>
+          <button onClick={() => setShow(true)} className="Contact-button">
+            <div className="Contact-button-text">
+              <p><b>contact</b></p>
+            </div>
+            <div className="Contact-button-arrow"><span className="Arrow-body"></span><span className="Arrow-triangle"></span></div>
+          </button>
         </div>
+        <ModalComponent
+          show={show}
+          onHide={() => setShow(false)}
+        />
       </Row>
 
 

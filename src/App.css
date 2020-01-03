@@ -1010,6 +1010,7 @@
 
 .links-wrapper {
   width: 100%;
+  margin-bottom: 50px;
 }
 
 .links {
@@ -1057,12 +1058,24 @@
   display: flex;
   justify-content: center;
   align-content: center;
+  font-family: "Poppins", sans-serif;
 }
 .pill-text a {
   text-decoration: none !important;
   font-size: 0.8rem;
   color: #0D0F11;
   transform: translateY(10px);
+}
+.pill-text a:hover {
+  color: #9A5151;
+}
+
+.modal-button {
+  border-radius: 30px;
+  height: 30px;
+  background: none;
+  border: none;
+  box-shadow: 3px 3px 4px #1e1e1e80, -3px -3px 4px #ffffff80;
 }
 
 /*# sourceMappingURL=App.css.map */

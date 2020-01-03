@@ -2,8 +2,13 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import ModalComponent from './Modal';
+import { useState } from 'react';
 
 const Hero = () => {
+
+  const [show, setShow] = useState(false);
+
   return (
     <Container as="section" className="Hero">
       <Row className="Hero-row">
@@ -27,7 +32,7 @@ const Hero = () => {
       <Row>
         <Col className="Contact-button-col" xs={12}>
           <div className="Contact-button-wrapper">
-            <button className="Contact-button">
+            <button onClick={() => setShow(true)} className="Contact-button">
               <div className="Contact-button-text">
                 <p><b>contact</b></p>
               </div>
@@ -36,6 +41,10 @@ const Hero = () => {
           </div>
         </Col>
       </Row>
+      <ModalComponent
+        show={show}
+        onHide={()=> setShow(false)}
+      />
       <Row className="add-text-row">
         <Col>
           <div className="add-text">
