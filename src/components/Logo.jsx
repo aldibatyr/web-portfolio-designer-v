@@ -8,6 +8,7 @@ const Logo = () => {
       <Link to="/">
         <div className='Logo-text-wrapper'>
           <span className='Logo-h1-text'>ALDIBA</span>
+          <span className='small-text'>creates</span>
         </div>
       </Link>
     </div >

@@ -12,12 +12,14 @@
 
         .navigation {
             width: 320px;
-            margin: 0 auto;
-
+            margin: 10px auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             div {
-                display: inline-block;
                 width: 33.3%;
             }
+
 
             .link-box {
                 text-align: center;
@@ -49,7 +51,11 @@
         }
 
         .Logo-box {
-
+            border-left: $palered 3px solid;
+            border-top: $palered 2px solid;
+            border-bottom: $palered 4px solid;
+            border-radius: 10px;
+            padding: 3px;
             a {
                 text-decoration: none !important;
             }
@@ -58,8 +64,13 @@
                 width: 100px;
                 height: 40px;
                 text-align: center;
-
+                line-height: 1;
+                .small-text {
+                    font-size: 0.8rem;
+                    font-family: 'Poppins', sans-serif;
+                }
                 span {
+                    display: block;
                     font-family: 'Montserrat', sans-serif;
                     color: $darktext;
                     text-decoration: none;
@@ -1301,4 +1312,54 @@
             background: none;
             border: none;
             box-shadow: 3px 3px 4px #1e1e1e80, -3px -3px 4px #ffffff80;
+        }
+
+        .footer-row {
+            box-shadow: $shadow-property;
+            border-radius: 30px;
+            height:200px;
+            margin-bottom: 50px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+
+        .logo-wrap {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            height: 100%;
+        }
+
+        .footer-copy-column {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-end;
+            padding: 10px 20px;
+        }
+
+        .links-to-pages {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        .links-wrap {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            flex-direction: column;
+            padding-left: 5px;
+            a {
+                display: block;
+                margin: 10px 0;
+                text-decoration: none !important;
+                color: $darktext;
+                &:hover {
+                    color: $palered;
+                }
+            }
+        }
+
+        .small-text {
+            font-size: 0.8rem;
         }
