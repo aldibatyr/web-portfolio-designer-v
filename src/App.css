@@ -1092,6 +1092,7 @@
   background: none;
   border: none;
   box-shadow: 3px 3px 4px #1e1e1e80, -3px -3px 4px #ffffff80;
+  font-family: "Poppins", sans-serif !important;
 }
 
 .footer-row {
