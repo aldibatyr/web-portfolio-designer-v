@@ -68,7 +68,7 @@
 }
 @media screen and (max-width: 576px) {
   .Text-box-hero h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
 }
 
@@ -842,7 +842,7 @@
   border-radius: 0.5%;
 }
 .Project .links-to-repos {
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
   display: flex;
   justify-content: center;
