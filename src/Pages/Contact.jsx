@@ -1,5 +1,5 @@
 import React from 'react'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faGlobe } from '@fortawesome/free-solid-svg-icons';
 import LinkCard from '../components/LinkCard';
 import { faGithub, faLinkedin, faInstagram, faYoutube, faTelegram } from '@fortawesome/free-brands-svg-icons';
 
@@ -21,6 +21,7 @@ const Contact = () => {
           <LinkCard icon={faTelegram} href="https://t.me/aldibatyr" name="@aldibatyr" />
           <LinkCard icon={faInstagram} href="https://instagram.com/btrbekov" name="@btrbekov"/>
           <LinkCard icon={faYoutube} href="https://www.youtube.com/channel/UCtK5rxP5E-FMU9LFpT9S4Rg" name="Mojo Hookah Lounge"/>
+          <LinkCard icon={faGlobe} href="https://www.twine.fm/aldibatyrbekov" name="https://www.twine.fm/aldibatyrbekov"/>
         </div>
       </div>
 
