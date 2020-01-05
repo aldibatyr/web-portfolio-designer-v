@@ -1,4 +1,26 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+.page-enter {
+  opacity: 0;
+  transform: scale(1.1);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 400ms, transform 400ms;
+}
+
+.page-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.page-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
+}
+
 .navigation {
   width: 320px;
   margin: 10px auto;
@@ -21,19 +43,19 @@
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
   font-size: 1.2rem;
-  color: #9A5151;
+  color: #9a5151;
 }
 .navigation .link-box .underline {
   display: block;
   width: 0;
-  border-top: 2px solid #9A5151;
+  border-top: 2px solid #9a5151;
   transition: 0.3s all ease-in-out;
 }
 
 .Logo-box {
-  border-left: #9A5151 3px solid;
-  border-top: #9A5151 2px solid;
-  border-bottom: #9A5151 4px solid;
+  border-left: #9a5151 3px solid;
+  border-top: #9a5151 2px solid;
+  border-bottom: #9a5151 4px solid;
   border-radius: 10px;
   padding: 3px;
 }
@@ -53,13 +75,13 @@
 .Logo-box .Logo-text-wrapper span {
   display: block;
   font-family: "Montserrat", sans-serif;
-  color: #0D0F11;
+  color: #0d0f11;
   text-decoration: none;
   font-size: 1.5rem;
 }
 
 .Red-text {
-  color: #9A5151 !important;
+  color: #9a5151 !important;
   text-decoration: underline;
 }
 
@@ -81,7 +103,7 @@
   color: #1e1e1e;
   font-family: "Montserrat", sans-serif;
   margin: 0 auto;
-  color: #0D0F11;
+  color: #0d0f11;
   text-align: center;
 }
 .Contact-button-wrapper {
@@ -101,7 +123,7 @@
   box-shadow: 6px 6px 16px #d1cdd780, -6px -6px 16px #ffffff80;
   overflow: hidden;
   border: none;
-  color: #0D0F11;
+  color: #0d0f11;
   font-size: 1rem;
   transition: 0.15s color ease-in-out;
 }
@@ -140,13 +162,13 @@
   display: block;
   height: 1px;
   width: 10px;
-  border: #0D0F11 0.5px solid;
+  border: #0d0f11 0.5px solid;
   transition: 0.3s width ease-in-out;
 }
 .Contact-button-wrapper .Contact-button .Contact-button-arrow .Arrow-triangle {
   border-top: 3px solid transparent;
   border-bottom: 3px solid transparent;
-  border-left: 5px solid #0D0F11;
+  border-left: 5px solid #0d0f11;
 }
 
 .add-text {
@@ -166,7 +188,7 @@
   width: 30px;
   height: 30px;
   border-radius: 30px;
-  background-color: #0D0F11;
+  background-color: #0d0f11;
 }
 .chevron-box svg {
   transform: translateY(5px);
@@ -177,7 +199,7 @@
   position: relative;
   width: 100%;
   height: 100px;
-  background-color: #FCF1E1;
+  background-color: #fcf1e1;
   z-index: 3;
   overflow: hidden;
 }
@@ -205,7 +227,7 @@
   padding-top: 100px;
   font-family: "Poppins", sans-serif;
   padding: 10px 20px;
-  color: #0D0F11;
+  color: #0d0f11;
 }
 .About .About-container .About-main-section .About-text .Technologies {
   margin: 50px auto;
@@ -337,7 +359,7 @@
   content: "";
   position: absolute;
   z-index: -1;
-  background-color: #FCF1E1;
+  background-color: #fcf1e1;
   width: 95%;
   height: 100%;
   top: 50%;
@@ -357,7 +379,7 @@
   display: block;
   font-family: "Montserrat", sans-serif;
   text-decoration: none;
-  color: #9A5151;
+  color: #9a5151;
   transition: 0.3s text-decoration ease-in-out;
 }
 .Skills .Skills-full-screen .Skills-main-content .Three-column-row .Social-media-column .Social-media-text .Text-box .Youtube-link .underline {
@@ -371,7 +393,7 @@
   margin: 50px auto;
   display: block;
   height: 50px;
-  border-left: 1px solid #FCF1E1;
+  border-left: 1px solid #fcf1e1;
   padding: 5px;
 }
 .Skills .Skills-full-screen .Skills-main-content .Three-column-row .Social-media-image-box .image {
@@ -386,7 +408,7 @@
   position: absolute;
   left: -240px;
   top: 150px;
-  color: #0D0F11;
+  color: #0d0f11;
   transform: rotate(270deg);
 }
 .Skills .Skills-full-screen .Skills-main-content .Three-column-row .Social-media-image-box .image .Left-text h3 {
@@ -397,7 +419,7 @@
   right: -220px;
   top: 150px;
   transform: rotate(90deg);
-  color: #0D0F11;
+  color: #0d0f11;
 }
 .Skills .Skills-full-screen .Skills-main-content .Three-column-row .Social-media-image-box .image .Right-text h3 {
   font-size: 3rem;
@@ -407,7 +429,7 @@
   width: 80%;
   position: absolute;
   bottom: -60px;
-  color: #0D0F11;
+  color: #0d0f11;
   text-align: center;
 }
 .Skills .Skills-full-screen .Skills-main-content .Three-column-row .Social-media-image-box .image .Bottom-text h3 {
@@ -419,7 +441,7 @@
 
 .formExample {
   padding: 5% 10%;
-  background-color: #FCF1E1;
+  background-color: #fcf1e1;
   width: 100%;
   display: block;
   font-family: "Poppins", sans-serif;
@@ -435,7 +457,7 @@
   align-items: center;
   font-family: "Montserrat", sans-serif;
   transition: 0.5s;
-  background-color: #0D0F11;
+  background-color: #0d0f11;
   padding: 5% 10%;
   box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.356);
 }
@@ -464,7 +486,7 @@
   padding-left: 10px;
   font-size: 14px;
   border: 1px solid #1c1c1c;
-  color: #0D0F11;
+  color: #0d0f11;
   background: #fff;
   transition: 0.3s;
 }
@@ -499,7 +521,7 @@
 
 .goBackButton:hover {
   cursor: pointer;
-  background: #FCF1E1;
+  background: #fcf1e1;
   color: #000;
 }
 
@@ -516,7 +538,7 @@
   height: 36px;
   background: #1c1c1c;
   border: 1px solid #1c1c1c;
-  color: #0D0F11;
+  color: #0d0f11;
   transition: 0.3s;
 }
 
@@ -602,7 +624,7 @@
   }
 }
 .different {
-  border-left: 1px solid #9A5151 !important;
+  border-left: 1px solid #9a5151 !important;
 }
 
 .Form-and-animations-column {
@@ -620,7 +642,7 @@
   position: absolute;
   left: -200px;
   bottom: 60px;
-  color: #0D0F11;
+  color: #0d0f11;
   transform: rotate(270deg);
 }
 .Form-and-animations-column .Form-container .Left-text h3 {
@@ -631,7 +653,7 @@
   right: -120px;
   top: 75px;
   transform: rotate(90deg);
-  color: #0D0F11;
+  color: #0d0f11;
 }
 .Form-and-animations-column .Form-container .Right-text h3 {
   font-size: 2.5rem;
@@ -647,7 +669,7 @@
   content: "";
   position: absolute;
   z-index: -1;
-  background-color: #FCF1E1;
+  background-color: #fcf1e1;
   width: 95%;
   height: 100%;
   top: 50%;
@@ -669,7 +691,7 @@
   position: absolute;
   left: 0;
   top: -30px;
-  color: #0D0F11;
+  color: #0d0f11;
   z-index: 3;
 }
 .Work-ethics-column .Work-ethics-image-wrapper .Left-text h3 {
@@ -681,7 +703,7 @@
   position: absolute;
   right: 0;
   bottom: -30px;
-  color: #0D0F11;
+  color: #0d0f11;
 }
 .Work-ethics-column .Work-ethics-image-wrapper .Right-text h3 {
   font-family: "Poppins", sans-serif;
@@ -706,7 +728,7 @@
   content: "";
   position: absolute;
   z-index: -1;
-  background-color: #FCF1E1;
+  background-color: #fcf1e1;
   width: 95%;
   height: 100%;
   top: 50%;
@@ -726,7 +748,7 @@
   top: -30px;
   left: 0;
   font-family: "Poppins", sans-serif;
-  color: #0D0F11;
+  color: #0d0f11;
 }
 .Image-wrapper .Top-text h3 {
   font-size: 2.5rem;
@@ -737,7 +759,7 @@
   bottom: -30px;
   right: 0;
   font-family: "Poppins", sans-serif;
-  color: #0D0F11;
+  color: #0d0f11;
 }
 .Image-wrapper .Bottom-text h3 {
   font-size: 2.5rem;
@@ -804,7 +826,7 @@
 }
 .Project .Title {
   font-family: "Montserrat" sans-serif;
-  color: #9A5151;
+  color: #9a5151;
   text-align: center;
 }
 .Project .Title h1 {
@@ -823,7 +845,7 @@
 .Project .divider .line {
   display: block;
   width: 80%;
-  border-top: 2px solid #9A5151;
+  border-top: 2px solid #9a5151;
   margin: 0 auto;
 }
 .Project .description-wrapper {
@@ -860,7 +882,7 @@
   transition: 0.3s all ease-in-out;
 }
 .Project .links-to-repos .link-wrapper div:hover {
-  background-color: #9A5151;
+  background-color: #9a5151;
   color: #eeeeee;
 }
 .Project .links-to-repos .link-wrapper div:hover a span {
@@ -872,7 +894,7 @@
 .Project .links-to-repos .link-wrapper div a span {
   display: block;
   font-family: "Poppins", sans-serif;
-  color: #0D0F11;
+  color: #0d0f11;
 }
 .Project .links-to-repos .link-wrapper .front-end {
   border-radius: 50px 0px 0px 50px;
@@ -906,7 +928,7 @@
   text-align: center;
   width: 100%;
   font-family: "Montserrat", sans-serif;
-  color: #0D0F11;
+  color: #0d0f11;
 }
 .technologies-wrapper .technologies-box div ul {
   margin: 0 !important;
@@ -940,7 +962,7 @@
   align-items: center;
   background-color: #1c1c1c;
   font-family: "Montserrat", sans-serif;
-  color: #0D0F11;
+  color: #0d0f11;
   font-size: 3rem;
 }
 @media screen and (max-width: 576px) {
@@ -957,7 +979,7 @@
   display: inline-block;
   width: 80px;
   height: 80px;
-  border: 3px solid #0D0F11;
+  border: 3px solid #0d0f11;
   border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -974,7 +996,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  background-color: #EDE511;
+  background-color: #ede511;
   z-index: 2;
   transform: translate(-50%, 50%);
   transition: 0.3s ease-in-out;
@@ -982,7 +1004,7 @@
 .App-footer .social-media-column .icon-box a {
   z-index: 3;
   text-decoration: none;
-  color: #0D0F11;
+  color: #0d0f11;
 }
 .App-footer .social-media-column .icon-box a svg {
   height: 50px;
@@ -998,7 +1020,7 @@
 .Contact-container .text-wrapper .header {
   width: 50%;
   min-width: 300px;
-  color: #0D0F11;
+  color: #0d0f11;
   margin: 200px auto;
   margin-bottom: 100px;
   text-align: center;
@@ -1013,7 +1035,7 @@
   margin: 30px 0;
 }
 .text-card .red {
-  color: #9A5151;
+  color: #9a5151;
 }
 .text-card p a {
   text-decoration: none;
@@ -1079,11 +1101,11 @@
 .pill-text a {
   text-decoration: none !important;
   font-size: 0.8rem;
-  color: #0D0F11;
+  color: #0d0f11;
   transform: translateY(10px);
 }
 .pill-text a:hover {
-  color: #9A5151;
+  color: #9a5151;
 }
 
 .modal-button {
@@ -1135,10 +1157,10 @@
   display: block;
   margin: 10px 0;
   text-decoration: none !important;
-  color: #0D0F11;
+  color: #0d0f11;
 }
 .links-wrap a:hover {
-  color: #9A5151;
+  color: #9a5151;
 }
 
 .small-text {
