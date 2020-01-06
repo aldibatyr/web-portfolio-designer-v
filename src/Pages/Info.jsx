@@ -170,7 +170,7 @@ const Info = () => {
             <h1>Mojo Hookah Lounge</h1>
             <div className="divider"></div>
             <p>On the side, I am still connected to a hookah industry. I changed the place where I worked and became the operations manager. We also started a YouTube channel to create a community of people who share the same passion.</p>
-            <p className="red">It is available via this <a href="http://">link</a>.</p>
+            <p className="red">It is available via this <a href="https://www.youtube.com/channel/UCtK5rxP5E-FMU9LFpT9S4Rg">link</a>.</p>
           </div>
           <div className="text-card">
             <h1>Choices</h1>
