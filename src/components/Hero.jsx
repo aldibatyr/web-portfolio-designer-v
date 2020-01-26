@@ -26,6 +26,11 @@ const Hero = () => {
 
 
 
+
+  // useEffect(() => {
+  //   effect
+   
+  // }, [input])
   return (
     <Container as="section" className="Hero">
       <Row className="Hero-row">
@@ -62,7 +67,9 @@ const Hero = () => {
         show={show}
         onHide={() => setShow(false)}
       />
-      <Row className="add-text-row">
+      <Row ref={el => {
+        addText = el;
+      }} className="add-text-row">
         <Col>
           <div ref={describeText} className="add-text">
             <p>Scroll down to see recent projects</p>
