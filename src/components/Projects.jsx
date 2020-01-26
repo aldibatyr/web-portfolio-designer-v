@@ -1,7 +1,16 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap';
+import { useIntersection } from 'react-use';
+import gsap from 'gsap';
+import { useRef } from 'react';
 
 const Projects = () => {
+
+  const firstProject = useRef(null);
+  const secondProject = useRef(null);
+  const thirdProject = useRef(null);
+  const fourthProject = useRef(null)
+
   return (
     <Container as="section" className="Projects" id="projects">
       <Row className="Project-row">
@@ -13,7 +22,7 @@ const Projects = () => {
                   <h4>FRONT END</h4>
                 </div>
                 <ul>
-                <li>HTML5</li>
+                  <li>HTML5</li>
                   <li>CSS3 and Material UI</li>
                   <li>JavaScript</li>
                   <li>React</li>
@@ -25,7 +34,7 @@ const Projects = () => {
                   <h4>BACK END</h4>
                 </div>
                 <ul>
-                <li>Node.js</li>
+                  <li>Node.js</li>
                   <li>Express</li>
                   <li>Knex</li>
                   <li>PostgreSQL</li>
@@ -36,19 +45,19 @@ const Projects = () => {
           </div>
         </Col>
         <Col lg={7}>
-          <div className="Project">
-            <div className="Title">
+          <div ref={firstProject} className="Project">
+            <div id="one" className="Title">
               <h1><b>WAITLINE</b></h1>
             </div>
-            <div className="divider">
+            <div id="one" className="divider">
               <span className="line"></span>
             </div>
-            <div className="description-wrapper">
+            <div id="one" className="description-wrapper">
               <div className="description">
                 <p>An app that was developed to help businesses keep track of the line at a restaurant/bar/lounge.</p>
               </div>
             </div>
-            <div className="links-to-repos">
+            <div id="one" className="links-to-repos">
               <div className="link-wrapper">
                 <div className="front-end">
                   <a href="https://github.com/aldibatyr/waitline" rel="noopener noreferrer" target="_blank">
@@ -83,11 +92,11 @@ const Projects = () => {
       </Row>
       <Row className="Project-row">
         <Col lg={7}>
-          <div className="Project">
-            <div className="Title">
+          <div ref={secondProject} className="Project">
+            <div className="Title two">
               <h1><b>JOBREEL</b></h1>
             </div>
-            <div className="divider">
+            <div className="divider two">
               <span className="line"></span>
             </div>
             <div className="description-wrapper">
@@ -147,7 +156,7 @@ const Projects = () => {
                   <h4>BACK END</h4>
                 </div>
                 <ul>
-                <li>Node.js</li>
+                  <li>Node.js</li>
                   <li>Express</li>
                   <li>Knex</li>
                   <li>PostgreSQL</li>
@@ -179,7 +188,7 @@ const Projects = () => {
                   <h4>BACK END</h4>
                 </div>
                 <ul>
-                <li>Node.js</li>
+                  <li>Node.js</li>
                   <li>Express</li>
                   <li>Knex</li>
                   <li>PostgreSQL</li>
@@ -189,7 +198,7 @@ const Projects = () => {
             </div>
           </div>
         </Col>
-        <Col lg={7}>
+        <Col ref={thirdProject} lg={7}>
           <div className="Project">
             <div className="Title">
               <h1><b>SPACED</b></h1>

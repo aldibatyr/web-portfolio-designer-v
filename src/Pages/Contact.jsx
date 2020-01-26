@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import LinkCard from '../components/LinkCard';
 import { faGithub, faLinkedin, faInstagram, faYoutube, faTelegram } from '@fortawesome/free-brands-svg-icons';

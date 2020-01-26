@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+import "./App.scss";
 import Navigation from "./components/Navigation";
 import { Switch, Route } from "react-router-dom";
 import Index from "./Pages/Index";
