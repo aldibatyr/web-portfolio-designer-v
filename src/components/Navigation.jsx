@@ -1,18 +1,21 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import Logo from './Logo';
+import '../styles/Navigation.scss';
 
 const Navigation = () => {
   return (
     <nav className="navigation">
-      <div className="link-box">
-        <Link to="/info">INFO</Link>
-        <span className="underline"></span>
-      </div>
-      <Logo/>
-      <div className="link-box">
-        <Link to="/contact">CONTACT</Link>
-        <span className="underline"></span>
+      <Logo />
+      <div className="links-wrapper">
+        <div className="link-box">
+          <Link to="/about">ABOUT</Link>
+          <span className="underline"></span>
+        </div>
+        <div className="link-box">
+          <Link to="/contact">CONTACT</Link>
+          <span className="underline"></span>
+        </div>
       </div>
     </nav>
   )

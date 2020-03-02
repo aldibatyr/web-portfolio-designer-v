@@ -27,7 +27,6 @@ const ModalComponent = (props) => {
           <LinkCard icon={faLinkedin} href="https://linkedin.com/in/aldibatyr" name="Aldiyar Batyrbekov" />
           <LinkCard icon={faTelegram} href="https://t.me/aldibatyr" name="@aldibatyr" />
           <LinkCard icon={faInstagram} href="https://instagram.com/btrbekov" name="@btrbekov" />
-          <LinkCard icon={faYoutube} href="https://www.youtube.com/channel/UCtK5rxP5E-FMU9LFpT9S4Rg" name="Mojo Hookah Lounge" />
         </div>
       </Modal.Body>
       <Modal.Footer>

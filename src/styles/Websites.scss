@@ -1,0 +1,28 @@
+.Websites-column {
+  opacity: 0;
+  transform: (translateY(-40px));
+  overflow: hidden;
+  border-radius: 10px;
+  transition: 0.3s all ease-out;
+  font-family: 'Poppins';
+  img {
+    max-width: 100%;
+    border-radius: 10px;
+    transition: 0.4s all ease-out;
+    filter: brightness(80%);
+  }
+  .info {
+    margin-top: 10px;
+    visibility: hidden;
+  }
+  &:hover {
+    transform: translateY(-5px);
+    img {
+      transform: scale(1.05);
+      filter: brightness(100%);
+    }
+    .info {
+      visibility: visible;;
+    }
+  }
+}

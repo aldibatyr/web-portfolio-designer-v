@@ -1,13 +1,53 @@
-$beige: #fcf1e1;
-$dark: #1c1c1c;
-$yellow: #ede511;
-$palered: #9a5151;
-$palewhite: #a8a7a7;
-$darktext: #0d0f11;
-$break-handheld: 1024px;
-$light: #eeeeee;
-$shadow-property: 6px 6px 16px #d1cdd780, -6px -6px 16px #ffffff80;
+@import './styles/globals.scss';
 @import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+
+
+.overlay-animation {
+  height: calc(100vh + 70px);
+  top: -70px;
+  width: 100vw;
+  background-color: #000000;
+  position: fixed;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .spotlight {
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    background-color: #fff;
+  }
+
+  .animation-box {
+    span {
+      font-size: 2rem;
+      color: #ffffff;
+      font-family: 'Poppins';
+      mix-blend-mode: difference;
+    }
+  }
+
+  @media screen and (max-width: 425px) {
+    .spotlight {
+      height: 50px;
+      width: 50px;
+      border-radius: 50px;
+    }
+
+    .animation-box {
+      span {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+.App {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
 
 .page-enter {
   opacity: 0;
@@ -30,206 +70,22 @@ $shadow-property: 6px 6px 16px #d1cdd780, -6px -6px 16px #ffffff80;
   transform: scale(0.9);
   transition: opacity 300ms, transform 300ms;
 }
-.navigation {
-  width: 320px;
-  margin: 10px auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  div {
-    width: 33.3%;
-  }
 
-  .link-box {
-    text-align: center;
-
-    &:hover {
-      .underline {
-        width: 90%;
-        margin: 0 auto;
-      }
-    }
-
-    a {
-      transition: 0.2s color ease-in-out;
-      text-decoration: none;
-      font-family: "Montserrat", sans-serif;
-      font-size: 1.2rem;
-      color: $palered;
-    }
-
-    .underline {
-      display: block;
-      width: 0;
-      border-top: 2px solid $palered;
-      transition: 0.3s all ease-in-out;
-    }
-  }
-}
-
-.Logo-box {
-  border-left: $palered 3px solid;
-  border-top: $palered 2px solid;
-  border-bottom: $palered 4px solid;
-  border-radius: 10px;
-  padding: 3px;
-  a {
-    text-decoration: none !important;
-  }
-
-  .Logo-text-wrapper {
-    width: 100px;
-    height: 40px;
-    text-align: center;
-    line-height: 1;
-    .small-text {
-      font-size: 0.8rem;
-      font-family: "Poppins", sans-serif;
-    }
-    span {
-      display: block;
-      font-family: "Montserrat", sans-serif;
-      color: $darktext;
-      text-decoration: none;
-      font-size: 1.5rem;
-    }
-  }
-}
 
 .Red-text {
-  color: $palered !important;
+  background: #C04848;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #480048, #C04848);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #480048, #C04848);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-decoration: underline;
 }
 
-.Text-box-hero {
-  h1 {
-    font-size: 4rem;
 
-    @media screen and (max-width: 576px) {
-      font-size: 3rem;
-    }
-  }
-}
-
-.Hero {
-  margin-top: 100px;
-  margin-bottom: 100px;
-  width: 100%;
-
-  .Hero-row {
-    color: #1e1e1e;
-    font-family: "Montserrat", sans-serif;
-    margin: 0 auto;
-    color: $darktext;
-    text-align: center;
-  }
-
-  .Contact-button-col {
-    // @media screen and (max-width: 450px) {
-    //     margin-bottom: 30px;
-    // }
-  }
-}
-
-.Contact-button-wrapper {
-  padding: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  .Contact-button {
-    display: flex;
-    flex-direction: row;
-    width: 120px;
-    height: 50px;
-    background-color: $light;
-    border-radius: 50px;
-    box-shadow: 6px 6px 16px #d1cdd780, -6px -6px 16px #ffffff80;
-    overflow: hidden;
-    border: none;
-    color: $darktext;
-    font-size: 1rem;
-    transition: 0.15s color ease-in-out;
-
-    &:hover {
-      color: $dark;
-
-      .Contact-button-arrow {
-        .Arrow-body {
-          width: 20px;
-          border: 0.5px solid $dark;
-        }
-
-        .Arrow-triangle {
-          border-left: 5px solid $dark;
-        }
-      }
-    }
-
-    .Contact-button-text {
-      height: 50px;
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      margin-left: 10px;
-
-      p {
-        margin: 0;
-      }
-      text-decoration: none !important;
-      font-family: "Montserrat", "sans-serif";
-    }
-
-    .Contact-button-arrow {
-      height: 50px;
-      width: 100%;
-      display: flex;
-      flex-direction: row;
-      justify-content: left;
-      padding-left: 5px;
-      align-items: center;
-
-      .Arrow-body {
-        display: block;
-        height: 1px;
-        width: 10px;
-        border: $darktext 0.5px solid;
-        transition: 0.3s width ease-in-out;
-      }
-
-      .Arrow-triangle {
-        border-top: 3px solid transparent;
-        border-bottom: 3px solid transparent;
-        border-left: 5px solid $darktext;
-      }
-    }
-  }
-}
-
-.add-text {
-  width: 300px;
-  margin: 0 auto;
-  text-align: center;
-  background-color: $light;
-  box-shadow: $shadow-property;
-  font-family: "Poppins", sans-serif;
-  padding: 10px 5px;
-  border-radius: 30px;
-}
-
-.chevron-box {
-  margin: 0 auto;
-  box-shadow: 2px 2px 2px #8b8b8b, -2px -2px 2px #ffffff;
-  width: 30px;
-  height: 30px;
-  border-radius: 30px;
-  background-color: $darktext;
-
-  svg {
-    transform: translateY(5px);
-    color: $light;
-  }
-}
 
 .Stitch {
   position: relative;
@@ -289,7 +145,8 @@ $shadow-property: 6px 6px 16px #d1cdd780, -6px -6px 16px #ffffff80;
             box-shadow: inset 5px 3px 6px #f708d723, inset -5px -3px 6px rgba(204, 23, 159, 0.308);
           }
 
-          box-shadow: -5px 3px 2px #f708d723, 5px -3px 2px rgba(204, 23, 159, 0.308);
+          box-shadow: -5px 3px 2px #f708d723,
+          5px -3px 2px rgba(204, 23, 159, 0.308);
         }
 
         .Personal-info {
@@ -716,6 +573,7 @@ $shadow-property: 6px 6px 16px #d1cdd780, -6px -6px 16px #ffffff80;
 }
 
 @keyframes shake {
+
   10%,
   90% {
     transform: translate3d(-1px, 0, 0);
@@ -945,13 +803,6 @@ $shadow-property: 6px 6px 16px #d1cdd780, -6px -6px 16px #ffffff80;
   margin: 100px auto;
 }
 
-.Project-row {
-  margin: 150px auto;
-
-  @media screen and (max-width: 576px) {
-    margin: 50px auto;
-  }
-}
 
 .Project {
   box-shadow: $shadow-property;
@@ -962,8 +813,17 @@ $shadow-property: 6px 6px 16px #d1cdd780, -6px -6px 16px #ffffff80;
   }
 
   .Title {
-    font-family: "Montserrat" sans-serif;
-    color: $palered;
+    font-family: "Montserrat"sans-serif;
+    background: #C04848;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #480048, #C04848);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #480048, #C04848);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: underline;
     text-align: center;
 
     h1 {
@@ -1025,7 +885,13 @@ $shadow-property: 6px 6px 16px #d1cdd780, -6px -6px 16px #ffffff80;
         transition: 0.3s all ease-in-out;
 
         &:hover {
-          background-color: $palered;
+          background: #C04848;
+          /* fallback for old browsers */
+          background: -webkit-linear-gradient(to right, #480048, #C04848);
+          /* Chrome 10-25, Safari 5.1-6 */
+          background: linear-gradient(to right, #480048, #C04848);
+          /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
           color: #eeeeee;
 
           a {
@@ -1051,8 +917,7 @@ $shadow-property: 6px 6px 16px #d1cdd780, -6px -6px 16px #ffffff80;
         box-shadow: -6px -6px 16px #ffffff80;
       }
 
-      .back-end {
-      }
+      .back-end {}
 
       .live-example {
         border-radius: 0px 50px 50px 0px;
@@ -1078,7 +943,7 @@ $shadow-property: 6px 6px 16px #d1cdd780, -6px -6px 16px #ffffff80;
     box-shadow: $shadow-property;
     border-radius: 30px;
 
-    > div {
+    >div {
       width: 50%;
       padding: 10px 5px;
       position: relative;
@@ -1141,7 +1006,8 @@ $shadow-property: 6px 6px 16px #d1cdd780, -6px -6px 16px #ffffff80;
     justify-content: center;
     align-items: center;
     background-color: $dark;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat",
+    sans-serif;
     color: $darktext;
     font-size: 3rem;
   }
@@ -1222,9 +1088,11 @@ $shadow-property: 6px 6px 16px #d1cdd780, -6px -6px 16px #ffffff80;
   padding: 20px 10px;
   font-family: "Poppins", sans-serif;
   margin: 30px 0;
+
   .red {
     color: $palered;
   }
+
   p {
     a {
       text-decoration: none;
@@ -1246,12 +1114,14 @@ $shadow-property: 6px 6px 16px #d1cdd780, -6px -6px 16px #ffffff80;
   width: 250px;
   margin: 10px auto;
 }
+
 .link-card {
   border-radius: 50px;
   height: 50px;
   box-shadow: $shadow-property;
   margin-bottom: 20px;
 }
+
 .inner-pill {
   height: 40px;
   box-shadow: $shadow-property;
@@ -1271,6 +1141,7 @@ $shadow-property: 6px 6px 16px #d1cdd780, -6px -6px 16px #ffffff80;
   display: flex;
   justify-content: center;
   box-shadow: 3px 3px 4px #1e1e1e80;
+
   svg {
     color: $light;
     width: 30px;
@@ -1286,11 +1157,13 @@ $shadow-property: 6px 6px 16px #d1cdd780, -6px -6px 16px #ffffff80;
   justify-content: center;
   align-content: center;
   font-family: "Poppins", sans-serif;
+
   a {
     text-decoration: none !important;
     font-size: 0.8rem;
     color: $darktext;
     transform: translateY(10px);
+
     &:hover {
       color: $palered;
     }
@@ -1338,17 +1211,20 @@ $shadow-property: 6px 6px 16px #d1cdd780, -6px -6px 16px #ffffff80;
   justify-content: flex-end;
   align-items: center;
 }
+
 .links-wrap {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
   flex-direction: column;
   padding-left: 5px;
+
   a {
     display: block;
     margin: 10px 0;
     text-decoration: none !important;
     color: $darktext;
+
     &:hover {
       color: $palered;
     }
