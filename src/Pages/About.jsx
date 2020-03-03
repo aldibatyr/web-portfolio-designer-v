@@ -12,9 +12,9 @@ const About = () => {
   useEffect(() => {
     tl
       .fromTo('.spotlight', 0.5, {scale: 0}, {scale: 1} )
-      .to('.spotlight', 3 ,{ x: 220, ease: 'power4.inOut'}, '-=0.2')
+      .to('.spotlight', 2 ,{ x: 220, ease: 'power4.inOut'}, '-=0.2')
       .to('.spotlight', 0.5, {scale: 0}, '-=0.2')
-      .to('.overlay-animation', 1, {y: '-100vh'})
+      .to('.overlay-animation', 1, {y: '-100vh', ease: 'power4.inOut'})
   }, [])
 
   return (

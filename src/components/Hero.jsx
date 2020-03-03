@@ -24,7 +24,7 @@ const Hero = () => {
   return (
     <Container as="section" className="Hero">
       <Row className="Hero-row">
-        <Col className="Hero-hello-col" xs={12} md={8}>
+        <Col className="Hero-hello-col" xs={12} md={{span: 10, offset: 1}}>
           <h1 className='h1-animate'>Hello, my name is Aldiyar.</h1>
           <h2 className="Red-text h2-animate">I build stuff online.</h2>
           <div className="Contact-button-wrapper">
