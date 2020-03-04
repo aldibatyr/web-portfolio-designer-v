@@ -28,7 +28,7 @@ const About = () => {
 
         </div>
       </div>
-    <Container>
+    <Container style={{marginBottom: '100px'}}>
       <Row>
         <div className="heading">
           <h2>1994-2001</h2>
