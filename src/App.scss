@@ -1,6 +1,12 @@
 @import './styles/globals.scss';
 @import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
 
+.section {
+  h1 {
+    font-family: 'Montserrat';
+  }
+}
+
 
 .overlay-animation {
   height: calc(100vh + 70px);
