@@ -1,0 +1,78 @@
+@import './globals.scss';
+
+.navigation {
+  width: 90%;
+  margin:auto;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  display: flex;
+  overflow-x: scroll;
+
+
+  .links-wrapper {
+    margin: auto;
+    padding-left: 20px;
+    display: flex;
+    text-align: right;
+    align-items: flex-end;
+    .link-box {
+      text-align: center;
+      margin: auto 5px;
+
+      &:hover {
+        .underline {
+          width: 90%;
+          margin: 0 auto;
+        }
+      }
+
+      a {
+        transition: 0.2s color ease-in-out;
+        text-decoration: none;
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.2rem;
+        color: $palered;
+      }
+
+      .underline {
+        display: block;
+        width: 0;
+        border-top: 2px solid $palered;
+        transition: 0.3s all ease-in-out;
+      }
+    }
+  }
+}
+
+.Logo-box {
+  width: 120px !important;
+  border-left: $palered 3px solid;
+  border-top: $palered 2px solid;
+  border-bottom: $palered 4px solid;
+  border-radius: 10px;
+  padding: 3px;
+
+  a {
+    text-decoration: none !important;
+  }
+
+  .Logo-text-wrapper {
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    line-height: 1;
+
+    .small-text {
+      font-size: 0.8rem;
+      font-family: "Poppins", sans-serif;
+    }
+
+    span {
+      display: block;
+      font-family: "Montserrat", sans-serif;
+      color: $darktext;
+      text-decoration: none;
+      font-size: 1.5rem;
+    }
+  }
+}

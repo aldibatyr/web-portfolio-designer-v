@@ -26,7 +26,7 @@ const Footer = () => {
         <Col  xs={6} md={4} className="links-to-pages">
           <div className="links-wrap">
             <Link to='/'>Home</Link>
-            <Link to='/info'>Info</Link>
+            <Link to='/about'>About</Link>
             <Link to='/contact'>Contact</Link>
           </div>
         </Col>

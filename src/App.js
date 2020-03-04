@@ -1,19 +1,22 @@
-import React from "react";
-import "./App.css";
+import React, { useEffect } from "react";
+import gsap from 'gsap';
+import "./App.scss";
 import Navigation from "./components/Navigation";
 import { Route } from "react-router-dom";
-import {CSSTransition} from 'react-transition-group';
 import Index from "./Pages/Index";
-import Info from "./Pages/Info";
+import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 import Footer from "./components/Footer";
 const routes = [
   { path: '/', name: 'Index', Component: Index },
-  { path: '/info', name: 'Info', Component: Info },
-  { path: '/contact', name: 'Contact', Component: Contact }
+  { path: '/about', name: 'About', Component: About },
+  { path: '/contact', name: 'Contact', Component: Contact },
 ];
 function App() {
 
+  useEffect(() => {
+    gsap.to('body', 0, {css: {visibility: "visible"}})
+  })
 
   return (
     <div className="App">
@@ -21,24 +24,15 @@ function App() {
         <Navigation />
       </header>
       <main role="main" className="Main-content">
-          {routes.map(({ path, Component }) => (
-            <Route key={path} exact path={path}>
-              {({ match }) => (
-                <CSSTransition
-                  in={match != null}
-                  timeout={300}
-                  classNames="page"
-                  unmountOnExit
-                >
-                  <div className="page">
-                    <Component />
-                  </div>
-                </CSSTransition>
-              )}
+        {routes.map(({ path, Component }) => (
+          <Route key={path} exact path={path}>
+            <div className="page">
+              <Component />
+            </div>
             </Route>
-          ))}
+        ))}
       </main>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
