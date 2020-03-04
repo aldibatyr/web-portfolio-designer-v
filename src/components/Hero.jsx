@@ -45,7 +45,7 @@ const Hero = () => {
         <Col>
           <div className="add-text">
             <p>Scroll down to see recent projects</p>
-            <a href="#projects">
+            <a href="#websites">
               <div className="chevron-box">
                 <FontAwesomeIcon icon={faChevronDown} />
               </div>
