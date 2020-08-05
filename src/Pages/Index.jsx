@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import Hero from '../components/Hero';
 import Projects from '../components/Projects';
 import Websites from '../components/Websites';
-import Logo from '../components/Logo';
 import gsap from 'gsap';
 
 const Index = () => {

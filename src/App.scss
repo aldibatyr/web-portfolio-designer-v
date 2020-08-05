@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
 
 .container {
-  > h1 {
+  >h1 {
     font-family: 'Montserrat';
   }
 }
@@ -826,7 +826,7 @@
     /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #480048, #C04848);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  
+
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-decoration: underline;
@@ -897,7 +897,7 @@
           /* Chrome 10-25, Safari 5.1-6 */
           background: linear-gradient(to right, #480048, #C04848);
           /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        
+
           color: #eeeeee;
 
           a {
@@ -1239,4 +1239,69 @@
 
 .small-text {
   font-size: 0.8rem;
+}
+
+.creativeContainer {
+  position: relative;
+  width: 100%;
+
+  .circleYellow {
+    transform: translateX(10px);
+    top: 10px;
+    height: auto;
+    width: 100%;
+    background-color: #d6d680;
+    clip-path: circle();
+    img {
+      max-height: 450px;
+    }
+  }
+
+  .circlePurple {
+    position: absolute;
+    top: -50px;
+    right: 0;
+    width: 50%;
+    height: auto;
+    background-color: #8a36d8;
+    clip-path: circle();
+
+    img {
+      max-height: 400px;
+    }
+  }
+
+  .circleBlue {
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    width: 30%;
+    height: auto;
+    background-color: #128cb1;
+    clip-path: circle();
+
+    img {
+      max-height: 200px;
+    }
+  }
+
+  .circleMalina {
+    position: absolute;
+    bottom: 70px;
+    right: 100px;
+    height: 100px;
+    width: 100px;
+    background: #ad0855;
+    clip-path: circle();
+  }
+
+  .circleGreen {
+    position: absolute;
+    top: 25px;
+    left: 100px;
+    background: #8cb629;
+    height: 50px;
+    width: 50px;
+    clip-path: circle();
+  }
 }

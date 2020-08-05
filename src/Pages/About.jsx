@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import gsap from 'gsap';
 import { Container, Row, Col } from 'react-bootstrap';
 import ModalComponent from '../components/Modal';
+import Background from '../components/Background';
 
 
 const About = () => {
@@ -19,6 +20,7 @@ const About = () => {
 
   return (
     <>
+    {/* <Background /> */}
     <div className="overlay-animation">
         <div className="spotlight">
 

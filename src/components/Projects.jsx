@@ -4,7 +4,7 @@ import { Container, Row, Col } from 'react-bootstrap'
 const Projects = () => {
   return (
     <Container as="section" className="Projects" id="projects">
-      <h1>Projects</h1>
+      <h1>Web Projects</h1>
       <Row className="Project-row">
         <Col lg={5}>
           <div className="technologies-wrapper">
@@ -237,7 +237,15 @@ const Projects = () => {
           </div>
         </Col>
       </Row>
-      <Row className="Project-row">
+
+    </Container>
+  )
+}
+
+export default Projects;
+
+
+{/* <Row className="Project-row">
         <Col lg={7}>
           <div className="Project">
             <div className="Title">
@@ -313,9 +321,4 @@ const Projects = () => {
             </div>
           </div>
         </Col>
-      </Row>
-    </Container>
-  )
-}
-
-export default Projects;
+      </Row> */}

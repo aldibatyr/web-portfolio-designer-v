@@ -7,9 +7,10 @@ import Index from "./Pages/Index";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 import Footer from "./components/Footer";
+import AlternateAbout from "./Pages/AlternateAbout";
 const routes = [
   { path: '/', name: 'Index', Component: Index },
-  { path: '/about', name: 'About', Component: About },
+  { path: '/about', name: 'About', Component: AlternateAbout },
   { path: '/contact', name: 'Contact', Component: Contact },
 ];
 function App() {
