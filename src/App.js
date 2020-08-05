@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import gsap from 'gsap';
+import gsap from "gsap";
 import "./App.scss";
 import Navigation from "./components/Navigation";
 import { Route } from "react-router-dom";
@@ -9,18 +9,17 @@ import Contact from "./Pages/Contact";
 import Footer from "./components/Footer";
 import AlternateAbout from "./Pages/AlternateAbout";
 const routes = [
-  { path: '/', name: 'Index', Component: Index },
-  { path: '/about', name: 'About', Component: AlternateAbout },
-  { path: '/contact', name: 'Contact', Component: Contact },
+  { path: "/", name: "Index", Component: Index },
+  { path: "/about", name: "About", Component: AlternateAbout },
+  { path: "/contact", name: "Contact", Component: Contact },
 ];
 function App() {
-
   useEffect(() => {
-    gsap.to('body', 0, {css: {visibility: "visible"}})
-  })
+    gsap.to("body", 0, { css: { visibility: "visible" } });
+  });
 
   return (
-    <div className="App">
+    <div className="App" style={{ overflow: "hidden" }}>
       <header className="App-header">
         <Navigation />
       </header>
@@ -30,7 +29,7 @@ function App() {
             <div className="page">
               <Component />
             </div>
-            </Route>
+          </Route>
         ))}
       </main>
       <Footer />
