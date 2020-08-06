@@ -21,15 +21,7 @@ const About = () => {
   return (
     <>
     {/* <Background /> */}
-    <div className="overlay-animation">
-        <div className="spotlight">
 
-        </div>
-        <div className="animation-box">
-          <span>About Me</span>
-
-        </div>
-      </div>
     <Container style={{marginBottom: '100px'}}>
       <Row>
         <div className="heading">
