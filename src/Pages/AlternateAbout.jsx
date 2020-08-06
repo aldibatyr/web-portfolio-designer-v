@@ -51,7 +51,10 @@ const AlternateAbout = () => {
           <span>About Me</span>
         </div>
       </div>
-      <Container as="section" style={{ minHeight: "100vh" }}>
+      <Container
+        as="section"
+        style={{ minHeight: "100vh", fontFamily: "Poppins" }}
+      >
         <Row style={{ marginTop: "100px" }}>
           <Col xs={12} md={6}>
             <ImagePlaceholder />
