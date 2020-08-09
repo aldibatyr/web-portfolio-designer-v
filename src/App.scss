@@ -838,7 +838,11 @@
       font-size: 5rem;
 
       @media screen and (max-width: 500px) {
-        font-size: 4rem;
+        font-size: 3rem;
+      }
+
+      @media screen and (max-width: 320px) {
+        font-size: 2.5rem;
       }
     }
   }
@@ -948,16 +952,14 @@
     display: flex;
     box-shadow: $shadow-property;
     border-radius: 30px;
-
+    justify-content: space-evenly;
     >div {
-      width: 50%;
-      padding: 10px 5px;
+      padding: 10px;
       position: relative;
     }
 
     div {
       .title {
-        text-align: center;
         width: 100%;
         font-family: "Montserrat", sans-serif;
         color: $darktext;
@@ -970,26 +972,6 @@
           list-style: none;
           font-family: "Poppins", sans-serif;
         }
-      }
-    }
-
-    .front-end {
-      // background-color: $beige;
-
-      .title {
-        position: absolute;
-        top: -24px;
-        left: 0;
-      }
-    }
-
-    .back-end {
-      // background-color: $palewhite;
-
-      .title {
-        position: absolute;
-        top: -24px;
-        right: 0;
       }
     }
   }
@@ -1304,4 +1286,12 @@
     width: 50px;
     clip-path: circle();
   }
+}
+
+.divider-projects {
+  width: 1px;
+  min-height: 200px;
+  margin-top: 15px;
+  background: linear-gradient(#eeeeee, #d3d1d1cb, #eeeeee);
+  border-radius: 0.5%;
 }
