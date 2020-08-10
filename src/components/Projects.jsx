@@ -12,7 +12,9 @@ const Projects = () => {
     try {
       setLoading(true);
       setError(false);
-      let projectsData = await contentfulClient.getEntries();
+      let projectsData = await contentfulClient.getEntries({
+        "content_type": "webProjects",
+      });
       setProjects(projectsData.items);
       setLoading(false);
     } catch (error) {
