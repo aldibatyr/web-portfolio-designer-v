@@ -4,6 +4,7 @@ import Logo from "./Logo";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCopyright } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import LogoNew from "../Assets/logo";
 
 const Footer = () => {
   const Year = () => {
@@ -15,7 +16,9 @@ const Footer = () => {
       <Row className="footer-row">
         <Col xs={6} md={4}>
           <div className="logo-wrap">
-            <Logo />
+            <Link to="/">
+              <LogoNew />
+            </Link>
           </div>
         </Col>
         <Col xs={6} md={4} className="links-to-pages">

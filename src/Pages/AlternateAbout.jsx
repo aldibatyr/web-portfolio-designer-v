@@ -1,12 +1,26 @@
-import React, { useEffect, useLayoutEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import { useRef } from "react";
-import { useState } from "react";
 import gsap from "gsap";
 import ModalComponent from "../components/Modal";
-import lenz from "../Assets/lenz.png";
+
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      delayChildren: 4,
+      staggerChildren: 0.05,
+    },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0, y: 100 },
+  show: { opacity: 1, y: 0 },
+};
+
 const AlternateAbout = () => {
   const [show, setShow] = useState(false);
   const colors = ["#d6d680", "#8a36d8", "#128cb1", "#ad0855", "#8cb629"];
@@ -20,21 +34,6 @@ const AlternateAbout = () => {
     "React Native",
   ];
 
-  const container = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        delay: 4.7,
-        when: "beforeChildren",
-        staggerChildren: 0.1,
-      },
-    },
-  };
-  const item = {
-    hidden: { scale: 0 },
-    show: { scale: 1 },
-  };
   let tl = gsap.timeline();
 
   useEffect(() => {
@@ -57,73 +56,24 @@ const AlternateAbout = () => {
       >
         <Row style={{ marginTop: "100px" }}>
           <Col xs={12} md={6}>
-            <ImagePlaceholder />
-          </Col>
-          <Col>
-            <motion.div
-              initial={{ opacity: 0, x: 100 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{
-                delay: 4.5,
-              }}
+            <LargeTextContainer
+              variants={container}
+              initial="hidden"
+              animate="show"
             >
-              <StyledTitleV2>Nice To Meet You</StyledTitleV2>
-              <StyledText>
-                <b>Well, few words about me.</b>
-              </StyledText>
-              <StyledText>
-                Currently in Los Angeles, born and raised in Almaty, Kazakhstan.
-              </StyledText>
-              <StyledText>
-                I love front-end web development. Want to see my face when I
-                code? Hover on the image or tap if you are on mobile device.
-                You'll love it!
-              </StyledText>
-              <StyledText>
-                <b>Here is the list of technologies that I use daily.</b>
-              </StyledText>
-              <StyledList
-                // initial={{ opacity: 0 }}
-                // animate={{ opacity: 1 }}
-                variants={container}
-                initial="hidden"
-                animate="show"
-              >
-                {technologies.map((tech, i) => (
-                  <StyledElement
-                    variants={item}
-                    key={i}
-                    color={colors[Math.floor(Math.random() * 5)]}
-                  >
-                    {tech}
-                  </StyledElement>
-                ))}
-              </StyledList>
-              <StyledText>
-                <b>BTW, you can always find me here</b>
-              </StyledText>
-              <div className="Contact-button-wrapper">
-                <motion.button
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  transition={{
-                    delay: 4.7,
-                  }}
-                  onClick={() => setShow(true)}
-                  className="Contact-button"
-                >
-                  <div className="Contact-button-text">
-                    <p>
-                      <b>contact</b>
-                    </p>
-                  </div>
-                  <div className="Contact-button-arrow">
-                    <span className="Arrow-body"></span>
-                    <span className="Arrow-triangle"></span>
-                  </div>
-                </motion.button>
-              </div>
-            </motion.div>
+              <motion.span variants={item}>
+                I am
+              </motion.span>
+              <motion.span variants={item}>
+                a
+              </motion.span>
+              <motion.span variants={item}>
+                good
+              </motion.span>
+              <motion.span variants={item}>
+                person.
+              </motion.span>
+            </LargeTextContainer>
           </Col>
         </Row>
       </Container>
@@ -131,6 +81,18 @@ const AlternateAbout = () => {
     </>
   );
 };
+
+const LargeTextContainer = styled(motion.div)`
+  display: flex;
+  flex-direction: column;
+  span {
+    font-size: 15vmin;
+    line-height: 1;
+    @media screen and (max-width: 500px) {
+      font-size: 18vmin;
+    }
+  }
+`;
 
 const StyledTitle = styled(motion.h1)``;
 

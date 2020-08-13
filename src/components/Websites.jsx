@@ -1,9 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row } from "react-bootstrap";
-import quest from "../Assets/317quest.png";
-import store from "../Assets/317store.png";
-import mojo from "../Assets/mojo.png";
-import lenz from "../Assets/lenz.png";
 
 import "../styles/Websites.scss";
 import Website from "./Website";
@@ -73,9 +69,13 @@ const Websites = () => {
     <Container as="section" className="Websites" id="websites">
       <h1>Websites</h1>
       <Row style={{ justifyContent: "center", alignContent: "center" }}>
-        {/* {siteData.map((site, i) => (
-          <Website key={i} site={site} />
-        ))} */}
+        {loading ? (
+          <div>Loading...</div>
+        ) : error ? (
+          <div>Error occured...</div>
+        ) : (
+          siteData.map((website) => <div>{website.fields.name}</div>)
+        )}
       </Row>
     </Container>
   );

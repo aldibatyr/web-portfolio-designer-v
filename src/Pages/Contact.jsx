@@ -30,7 +30,7 @@ const Contact = () => {
       <section className="Contact-container">
         <div className="text-wrapper">
           <div className="header">
-            <h1>Just in case if you have an urge to find me on some social medias</h1>
+            <h1>Just in case if you have an urge to find me on social media</h1>
           </div>
         </div>
         <div className="links-wrapper">
