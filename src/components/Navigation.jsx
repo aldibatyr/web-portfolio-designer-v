@@ -37,10 +37,10 @@ const Navigation = () => {
           <LogoNew />
         </Link>
         <NavigationLinks>
-          <LinkBox>
+          <LinkBox whileHover={{ scale: 1.05 }}>
             <Link to="/about">ABOUT</Link>
           </LinkBox>
-          <LinkBox>
+          <LinkBox whileHover={{ scale: 1.05 }}>
             <Link to="/contact">CONTACT</Link>
           </LinkBox>
         </NavigationLinks>
