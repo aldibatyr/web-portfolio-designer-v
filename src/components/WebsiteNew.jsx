@@ -77,9 +77,8 @@ const WebsiteNew = ({ websiteData }) => {
           </Col>
           <Col xs={12} md={7}>
             {
-              <ImageWrapper whileHover={{ scale: 1 }}>
+              <ImageWrapper>
                 <WebsiteImage
-                  whileHover={{ scale: 1.05 }}
                   src={`https:${imageURL}?fm=jpg&fl=progressive`}
                   alt=""
                 />
@@ -102,7 +101,7 @@ const WebsiteDescription = styled.div`
   padding: 20px 15%;
 
   h2 {
-    font-family: "Montserrat" sans-serif;
+    font-family: "Montserrat", sans-serif;
     background: #c04848;
     /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #480048, #c04848);
@@ -151,6 +150,7 @@ const WebsiteDescription = styled.div`
 const WebsiteImage = styled(motion.img)`
   max-width: 100%;
   height: auto;
+  overflow: hidden;
 `;
 
 const ImageWrapper = styled(motion.div)`

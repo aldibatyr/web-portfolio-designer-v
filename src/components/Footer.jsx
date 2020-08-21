@@ -30,8 +30,7 @@ const Footer = () => {
         </Col>
         <Col xs={12} md={4} className="footer-copy-column">
           <span className="small-text">
-            <FontAwesomeIcon icon={faCopyright} /> ALDIBAcreates. All rights
-            reserved. {Year()}
+            <FontAwesomeIcon icon={faCopyright} /> creativeCircle {Year()}
           </span>
         </Col>
       </Row>
