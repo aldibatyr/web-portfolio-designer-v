@@ -5,9 +5,25 @@ import { motion, useAnimation } from "framer-motion";
 import me from "../Assets/me.JPG";
 import { useInView } from "react-intersection-observer";
 
+const fadeUpVariants = {
+  notInView: {
+    opacity: 0,
+    y: 200,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    // transition: {
+    //   duration: 0.5,
+    // },
+  },
+};
+
 const Resume = () => {
   const controls = useAnimation();
-  const [resume, inView] = useInView();
+  const [resume, inView] = useInView({
+    threshold: 0.5,
+  });
 
   useEffect(() => {
     if (inView) {
@@ -26,16 +42,19 @@ const Resume = () => {
         },
         visible: {
           opacity: 1,
+          transition: {
+            staggerChildren: 0.1,
+          },
         },
       }}
     >
-      <Col xs={1} md={3} lg={6}>
+      <LeftCol variants={fadeUpVariants}>
         <NameWrapper>
-          <LargeName>Aldiyar</LargeName>
-          <ColoredLargeName>Batyrbekov</ColoredLargeName>
+          <ColoredLargeName>Aldiyar</ColoredLargeName>
+          <LargeName>Batyrbekov</LargeName>
         </NameWrapper>
-      </Col>
-      <Col xs={11} md={6}>
+      </LeftCol>
+      <RightCol variants={fadeUpVariants}>
         <InfoSection>
           <AddressSection>
             <SectionHeader>MY LOCATIONS</SectionHeader>
@@ -54,7 +73,7 @@ const Resume = () => {
         <MyImageContainer>
           <Image src={me} alt="Me standing in Mojave Desert" />
         </MyImageContainer>
-      </Col>
+      </RightCol>
     </ResumeContainer>
   );
 };
@@ -63,25 +82,42 @@ const ResumeContainer = styled(motion.div)`
   display: flex;
 `;
 
+const LeftCol = styled(motion.div)`
+  width: 6vw;
+  @media screen and (max-width: 768px) {
+    width: 15vw;
+  }
+`;
+
+const RightCol = styled(motion.div)`
+  max-width: 600px;
+`;
 const NameWrapper = styled(motion.div)`
   display: flex;
-  writing-mode: vertical-lr;
-  transform: rotate(180deg);
+  writing-mode: vertical-rl;
   margin-left: auto;
   margin-top: 100px;
 `;
 
 const LargeName = styled(motion.span)`
-  font-size: 80px;
+  font-size: 5vw;
   font-family: "Poppins";
+
+  @media screen and (max-width: 768px) {
+    font-size: 10vw;
+  }
 `;
 
 const ColoredLargeName = styled(motion.span)`
-  font-size: 80px;
+  font-size: 5vw;
   font-family: "Poppins";
   background: #8a36d8;
   color: #ededed;
   padding: 10px 0;
+
+  @media screen and (max-width: 768px) {
+    font-size: 10vw;
+  }
 `;
 
 const InfoSection = styled(motion.div)`
@@ -90,7 +126,11 @@ const InfoSection = styled(motion.div)`
   background: #8a36d8;
   padding: 10px;
   color: white;
-  font-family: "Poppins";
+  font-family: "Montserrat";
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 const SectionHeader = styled.div`
@@ -99,10 +139,18 @@ const SectionHeader = styled.div`
   margin-bottom: 30px;
 `;
 
-const AddressSection = styled.div``;
+const AddressSection = styled.div`
+  @media screen and (max-width: 768px) {
+    margin-bottom: 30px;
+  }
+`;
 
 const LanguagesSection = styled.div`
-  margin: auto;
+  margin-left: 10px;
+
+  @media screen and (max-width: 768px) {
+    margin-left: 0;
+  }
 `;
 
 const LanguagesList = styled.div`
@@ -124,13 +172,17 @@ const Language = styled.div`
 const MyImageContainer = styled.div`
   width: 100%;
   overflow: hidden;
-  height: 700px;
   margin-top: 10px;
+  max-height: 750px;
 `;
 
 const Image = styled.img`
   transform: translateY(-200px);
   filter: grayscale(50%);
+
+  @media screen and (max-width: 768px) {
+    transform: translate(-200px, -200px);
+  }
 `;
 
 export default Resume;

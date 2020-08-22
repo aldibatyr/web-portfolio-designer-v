@@ -1,11 +1,14 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import styled from "styled-components";
 import gsap from "gsap";
 import ModalComponent from "../components/Modal";
 import TechnologiesIUse from "../components/TechnologiesIUse";
 import Resume from "../components/Resume";
+import { useInView } from "react-intersection-observer";
+import AboutMeHeader from "../components/AboutMeHeader";
+import Experience from "../components/Experience";
 
 const container = {
   hidden: { opacity: 0 },
@@ -34,6 +37,7 @@ const AlternateAbout = () => {
       .to(".spotlight", 0.5, { scale: 0 }, "-=0.2")
       .to(".overlay-animation", 1, { y: "-100vh", ease: "power4.inOut" });
   }, []);
+
   return (
     <>
       <div className="overlay-animation">
@@ -69,6 +73,8 @@ const AlternateAbout = () => {
           <Resume />
         </Row>
       </Container>
+      <AboutMeHeader />
+      <Experience />
       <ModalComponent show={show} onHide={() => setShow(false)} />
     </>
   );
@@ -81,7 +87,7 @@ const LargeTextContainer = styled(motion.div)`
     font-size: 15vmin;
     line-height: 1;
     @media screen and (max-width: 500px) {
-      font-size: 18vmin;
+      font-size: 28vmin;
     }
   }
 `;

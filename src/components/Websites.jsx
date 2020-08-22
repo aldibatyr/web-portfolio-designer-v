@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
 import "../styles/Websites.scss";
-import Website from "./Website";
 import { contentfulClient } from "../contentfulClient";
 import WebsiteNew from "./WebsiteNew";
 

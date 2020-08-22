@@ -4,7 +4,6 @@ import "./App.scss";
 import Navigation from "./components/Navigation";
 import { Route } from "react-router-dom";
 import Index from "./Pages/Index";
-import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 import Footer from "./components/Footer";
 import AlternateAbout from "./Pages/AlternateAbout";

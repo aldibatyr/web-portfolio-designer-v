@@ -30,15 +30,6 @@ const container = {
   },
 };
 
-const item = {
-  hidden: {
-    scale: 0,
-  },
-  show: {
-    scale: 1,
-  },
-};
-
 const TechnologiesIUse = () => {
   const techStackContainer = useRef(null);
   const techs = [
@@ -78,6 +69,10 @@ const TechStackContainer = styled(motion.div)`
   position: relative;
   display: flex;
   flex-wrap: wrap;
+  @media screen and (max-width: 768px) {
+    margin-top: 75px;
+    margin-bottom: 75px;
+  }
 `;
 
 export default TechnologiesIUse;

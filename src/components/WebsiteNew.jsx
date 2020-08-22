@@ -98,8 +98,11 @@ const WebsiteContainer = styled(motion.div)`
 const WebsiteDescription = styled.div`
   box-shadow: 6px 6px 16px #d1cdd780, -6px -6px 16px #ffffff80;
   border-radius: 30px;
-  padding: 20px 15%;
+  padding: 20px 0;
 
+  @media screen and (max-width: 768px) {
+    margin-bottom: 10px;
+  }
   h2 {
     font-family: "Montserrat", sans-serif;
     background: #c04848;
@@ -119,6 +122,7 @@ const WebsiteDescription = styled.div`
 
   p {
     font-family: "Poppins";
+    padding: 0 15%;
   }
 
   a {
@@ -126,6 +130,8 @@ const WebsiteDescription = styled.div`
     justify-content: center;
     align-items: center;
     padding: 20px 10px;
+    margin-left: 15%;
+    margin-right: 15%;
     height: 100px;
     background-color: #eeeeee;
     text-align: center;
