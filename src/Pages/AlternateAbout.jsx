@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, CardImg } from "react-bootstrap";
 import { motion, useAnimation } from "framer-motion";
 import styled from "styled-components";
 import gsap from "gsap";
@@ -13,6 +13,8 @@ import Education from "../components/Education";
 import FullLine from "../components/FullLine";
 import CTAButton from "../components/CTAButton";
 import AboutMeCTASection from "../components/AboutMeCTASection";
+import Card from "../components/Card";
+import Skills from "../components/Skills";
 
 const container = {
   hidden: { opacity: 0 },
@@ -83,7 +85,7 @@ const AlternateAbout = () => {
       <Education />
       <FullLine />
       <AboutMeCTASection clickAction={() => setShow(true)} />
-      
+      <Skills />
       <ModalComponent show={show} onHide={() => setShow(false)} />
     </>
   );

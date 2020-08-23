@@ -74,6 +74,16 @@ const WebsiteNew = ({ websiteData }) => {
                 <span>Visit site</span>
               </a>
             </WebsiteDescription>
+            <span>
+              Co-developed with{" "}
+              <a
+                href="https://a7acreative.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                a7acreative.com
+              </a>
+            </span>
           </Col>
           <Col xs={12} md={7}>
             {

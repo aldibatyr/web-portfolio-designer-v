@@ -6,13 +6,12 @@ import { useInView } from "react-intersection-observer";
 
 const ctaVariants = {
   hidden: {
-    x: "-80vw",
+    opacity: 0,
+    y: 100,
   },
   show: {
-    x: 0,
-    transition: {
-      duration: 1,
-    },
+    opacity: 1,
+    y: 0,
   },
 };
 
