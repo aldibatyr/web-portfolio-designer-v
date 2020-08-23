@@ -19,6 +19,10 @@ export const MyRow = styled.div`
   &:last-child {
     margin-bottom: 0;
   }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const MyColumn = styled.div`

@@ -83,7 +83,7 @@ const AlternateAbout = () => {
       <Education />
       <FullLine />
       <AboutMeCTASection clickAction={() => setShow(true)} />
-
+      
       <ModalComponent show={show} onHide={() => setShow(false)} />
     </>
   );
