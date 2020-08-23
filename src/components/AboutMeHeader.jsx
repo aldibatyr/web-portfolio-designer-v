@@ -34,7 +34,7 @@ const headlineLine = {
   },
 };
 
-const AboutMeHeader = () => {
+const AboutMeHeader = ({title}) => {
   const controls = useAnimation();
   const [headline, inView] = useInView({
     threshold: 0.5,
@@ -53,7 +53,7 @@ const AboutMeHeader = () => {
       initial="hidden"
       animate={controls}
     >
-      <motion.h2 variants={headlineText}>experience</motion.h2>
+      <motion.h2 variants={headlineText}>{title}</motion.h2>
       <Line variants={headlineLine} />
     </Headline>
   );

@@ -17,6 +17,11 @@ import swift from "../Assets/logos/swift.png";
 import vue from "../Assets/logos/vue.png";
 import xd from "../Assets/logos/xd.png";
 import styledComponents from "../Assets/logos/styledComponents.png";
+import gsapLogo from "../Assets/logos/gsap.png";
+import postman from "../Assets/logos/postman.png";
+import postgresql from "../Assets/logos/postgresql.png";
+import mongo from "../Assets/logos/mongo.png";
+import notion from "../Assets/logos/notion.png";
 import TechnologyPresenterCell from "./TechnologyPresenterCell";
 
 const container = {
@@ -48,6 +53,11 @@ const TechnologiesIUse = () => {
     vue,
     xd,
     styledComponents,
+    gsapLogo,
+    postman,
+    postgresql,
+    mongo,
+    notion,
   ];
 
   return (

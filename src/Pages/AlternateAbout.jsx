@@ -9,6 +9,10 @@ import Resume from "../components/Resume";
 import { useInView } from "react-intersection-observer";
 import AboutMeHeader from "../components/AboutMeHeader";
 import Experience from "../components/Experience";
+import Education from "../components/Education";
+import FullLine from "../components/FullLine";
+import CTAButton from "../components/CTAButton";
+import AboutMeCTASection from "../components/AboutMeCTASection";
 
 const container = {
   hidden: { opacity: 0 },
@@ -73,8 +77,13 @@ const AlternateAbout = () => {
           <Resume />
         </Row>
       </Container>
-      <AboutMeHeader />
+      <AboutMeHeader title="experience" />
       <Experience />
+      <AboutMeHeader title="education" />
+      <Education />
+      <FullLine />
+      <AboutMeCTASection clickAction={() => setShow(true)} />
+
       <ModalComponent show={show} onHide={() => setShow(false)} />
     </>
   );

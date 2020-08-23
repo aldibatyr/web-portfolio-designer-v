@@ -1,13 +1,23 @@
 import React, { useEffect } from "react";
-import styled from "styled-components";
-import { motion, useAnimation } from "framer-motion";
+import { useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { MyContainer, MyRow, MyColumn } from "./myLayoutCompontents";
+
+const experienceVariants = {
+  hidden: {
+    x: "-80vw",
+  },
+  show: {
+    x: 0,
+    transition: {
+      duration: 1,
+    },
+  },
+};
 
 const Experience = () => {
   const experienceControls = useAnimation();
-  const [experienceContainer, inView] = useInView({
-    threshold: 0.5,
-  });
+  const [experienceContainer, inView] = useInView();
 
   useEffect(() => {
     if (inView) {
@@ -16,14 +26,19 @@ const Experience = () => {
   }, [experienceControls, inView]);
 
   return (
-    <ExperienceContainer ref={experienceContainer}>
-      <ExperienceRow>
-        <ExperienceColumn>
+    <MyContainer
+      ref={experienceContainer}
+      variants={experienceVariants}
+      initial="hidden"
+      animate={experienceControls}
+    >
+      <MyRow>
+        <MyColumn>
           <h5>2019-2020</h5>
           <h5>Camino Financial</h5>
-        </ExperienceColumn>
+        </MyColumn>
         <div style={{ minWidth: "33px" }} />
-        <ExperienceColumn>
+        <MyColumn>
           <h5 style={{ textTransform: "uppercase" }}>
             Front-End Web Developer
           </h5>
@@ -36,17 +51,18 @@ const Experience = () => {
             Figma, and Framer to React-based components. The latest project that
             our team tackled involved Vue, Nuxt, styled-components, and GSAP.
             Projects that I participated in involved styled-components,
-            Framer-Motion, React, GatsbyJS, Firebase, and Node.
+            Framer-Motion, React, GatsbyJS, MongoDB, PostgreSQL, Express, Firebase, Node,
+            and my personal favorite - GSAP.
           </p>
-        </ExperienceColumn>
-      </ExperienceRow>
-      <ExperienceRow>
-        <ExperienceColumn>
+        </MyColumn>
+      </MyRow>
+      <MyRow>
+        <MyColumn style={{ maxWidth: "200px" }}>
           <h5>2017 - 2019</h5>
           <h5>CalState Moving & Storage</h5>
-        </ExperienceColumn>
+        </MyColumn>
         <div style={{ minWidth: "33px" }} />
-        <ExperienceColumn>
+        <MyColumn>
           <h5 style={{ textTransform: "uppercase" }}>
             Customer Service Representative
           </h5>
@@ -56,37 +72,10 @@ const Experience = () => {
             of active and scheduled jobs. And performed various boring office
             tasks.
           </p>
-        </ExperienceColumn>
-      </ExperienceRow>
-    </ExperienceContainer>
+        </MyColumn>
+      </MyRow>
+    </MyContainer>
   );
 };
-
-const ExperienceContainer = styled(motion.div)`
-  margin-right: 15%;
-  width: 85%;
-  background: #8a36d8;
-  color: white;
-  padding-left: 15%;
-  padding-right: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-`;
-
-const ExperienceRow = styled.div`
-  display: flex;
-  margin-bottom: 50px;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-`;
-
-const ExperienceColumn = styled.div`
-  min-width: 200px;
-  h5 {
-    font-family: "Poppins";
-  }
-`;
 
 export default Experience;
