@@ -30,4 +30,8 @@ export const MyColumn = styled.div`
   h5 {
     font-family: "Poppins";
   }
+
+  p {
+    font-family: "Poppins";
+  }
 `;

@@ -21,9 +21,7 @@ const fadeUpVariants = {
 
 const Resume = () => {
   const controls = useAnimation();
-  const [resume, inView] = useInView({
-    threshold: 0.5,
-  });
+  const [resume, inView] = useInView();
 
   useEffect(() => {
     if (inView) {

@@ -47,6 +47,10 @@ const CTASection = styled(motion.div)`
   align-items: center;
   min-height: 50vh;
 
+  h2 {
+    font-family: "Montserrat";
+    text-align: center;
+  }
   @media screen and (max-width: 768px) {
     flex-direction: column;
   }

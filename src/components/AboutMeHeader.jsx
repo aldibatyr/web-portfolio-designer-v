@@ -34,7 +34,7 @@ const headlineLine = {
   },
 };
 
-const AboutMeHeader = ({title}) => {
+const AboutMeHeader = ({ title }) => {
   const controls = useAnimation();
   const [headline, inView] = useInView({
     threshold: 0.5,
@@ -67,6 +67,7 @@ const Headline = styled(motion.div)`
   margin-top: 75px;
   h2 {
     text-transform: uppercase;
+    font-family: "Montserrat";
   }
 `;
 
