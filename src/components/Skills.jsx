@@ -27,6 +27,7 @@ const Skills = () => {
   ];
   return (
     <Container>
+      <h2 style={{ fontFamily: "Montserrat" }}>My Skills Rated</h2>
       <Row>
         {skills.map((skill, i) => (
           <Col key={i} xs={12} md={6} lg={3}>

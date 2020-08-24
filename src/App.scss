@@ -953,6 +953,7 @@
     box-shadow: $shadow-property;
     border-radius: 30px;
     justify-content: space-evenly;
+
     >div {
       padding: 10px;
       position: relative;
@@ -1234,6 +1235,7 @@
     width: 100%;
     background-color: #d6d680;
     clip-path: circle();
+
     img {
       max-height: 450px;
     }
