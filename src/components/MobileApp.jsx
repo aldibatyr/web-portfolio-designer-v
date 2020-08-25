@@ -4,7 +4,13 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { contentfulClient } from "../contentfulClient";
 import { Row, Col } from "react-bootstrap";
-import { ImageWrapper, Image, ProjectDescription, TechnologiesUsedContainer, Technology } from "./myLayoutCompontents";
+import {
+  ImageWrapper,
+  Image,
+  ProjectDescription,
+  TechnologiesUsedContainer,
+  Technology,
+} from "./myLayoutCompontents";
 
 const MobileApp = ({ appData }) => {
   const controls = useAnimation();
@@ -75,6 +81,7 @@ const MobileApp = ({ appData }) => {
                   href={appData.link}
                   target="_blank"
                   rel="noopener noreferrer"
+                  style={{ fontFamily: "Poppins" }}
                 >
                   Visit Project
                 </a>
@@ -105,7 +112,5 @@ const MobileApp = ({ appData }) => {
 const AppContainer = styled(motion.div)`
   margin: 25px 0;
 `;
-
-
 
 export default MobileApp;
