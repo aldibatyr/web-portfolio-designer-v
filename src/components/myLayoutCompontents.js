@@ -54,7 +54,7 @@ border-radius: 30px;
 padding: 20px 0;
 
 @media screen and (max-width: 768px) {
-  margin-bottom: 10px;
+  margin-top: 10px;
 }
 h2 {
   font-family: "Montserrat", sans-serif;
