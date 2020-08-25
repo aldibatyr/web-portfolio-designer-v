@@ -17,7 +17,6 @@ const MobileApps = () => {
       const fetchedApps = await contentfulClient.getEntries({
         content_type: "mobileProject",
       });
-      console.log(fetchedApps);
       setAppsData(fetchedApps.items);
       setLoading(false);
     } catch (error) {

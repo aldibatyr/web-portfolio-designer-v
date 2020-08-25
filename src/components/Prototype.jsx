@@ -20,7 +20,6 @@ const Prototype = ({ prototypeData }) => {
 
   useEffect(() => {
     if (inView) {
-      console.log("started animation");
       controls.start("visible");
     }
   }, [controls, inView]);

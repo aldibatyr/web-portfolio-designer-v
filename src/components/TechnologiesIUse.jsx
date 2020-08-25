@@ -66,7 +66,6 @@ const TechnologiesIUse = () => {
       variants={container}
       initial="hidden"
       animate="show"
-      onClick={() => console.log(techs)}
     >
       {techs.map((tech, i) => (
         <TechnologyPresenterCell key={i} tech={tech} />

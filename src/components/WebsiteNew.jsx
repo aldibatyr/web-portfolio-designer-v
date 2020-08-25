@@ -14,7 +14,6 @@ const WebsiteNew = ({ websiteData }) => {
 
   useEffect(() => {
     if (inView) {
-      console.log("started animation");
       controls.start("visible");
     }
   }, [controls, inView]);
