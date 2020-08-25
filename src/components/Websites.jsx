@@ -17,7 +17,6 @@ const Websites = () => {
       const websitesData = await contentfulClient.getEntries({
         content_type: "websites",
       });
-      console.log(websitesData);
       setSiteData(websitesData.items);
       setLoading(false);
     } catch (error) {

@@ -1,16 +1,22 @@
 import React from "react";
 import styled from "styled-components";
 import { motion, useAnimation } from "framer-motion";
-import { Col, Row } from "react-bootstrap";
-import { useEffect } from "react";
-import { contentfulClient } from "../contentfulClient";
-import { useState } from "react";
 import { useInView } from "react-intersection-observer";
-import { ImageWrapper, Image, ProjectDescription } from "./myLayoutCompontents";
+import { useEffect } from "react";
+import { useState } from "react";
+import { contentfulClient } from "../contentfulClient";
+import { Row, Col } from "react-bootstrap";
+import {
+  ImageWrapper,
+  Image,
+  ProjectDescription,
+  TechnologiesUsedContainer,
+  Technology,
+} from "./myLayoutCompontents";
 
-const WebsiteNew = ({ websiteData }) => {
+const Prototype = ({ prototypeData }) => {
   const controls = useAnimation();
-  const [websiteRow, inView] = useInView();
+  const [prototypeRow, inView] = useInView();
 
   useEffect(() => {
     if (inView) {
@@ -25,7 +31,7 @@ const WebsiteNew = ({ websiteData }) => {
     try {
       setLoading(true);
       setError(false);
-      const asset = await contentfulClient.getAsset(websiteData.image.sys.id);
+      const asset = await contentfulClient.getAsset(prototypeData.image.sys.id);
       setImageURL(asset.fields.file.url);
       setLoading(false);
     } catch (error) {
@@ -39,8 +45,8 @@ const WebsiteNew = ({ websiteData }) => {
     fetchImage();
   }, []);
   return (
-    <WebsiteContainer
-      ref={websiteRow}
+    <PrototypeContainer
+      ref={prototypeRow}
       animate={controls}
       initial="hidden"
       variants={{
@@ -72,38 +78,44 @@ const WebsiteNew = ({ websiteData }) => {
           </Col>
           <Col xs={12} md={5}>
             <ProjectDescription>
-              <h2>{websiteData.name}</h2>
-              <p>{websiteData.description}</p>
-              
-              <a
-                href={websiteData.link}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span>Visit site</span>
-              </a>
+              <h2>{prototypeData.title}</h2>
+              <p>{prototypeData.description}</p>
+              <LinksContainer>
+                <a
+                  href={prototypeData.frontEndRepo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span>Front End Repo</span>
+                </a>
+                <a
+                  href={prototypeData.liveLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span>Visit App</span>
+                </a>
+              </LinksContainer>
+              <TechnologiesUsedContainer>
+                {prototypeData.technologies.map((technology, i) => (
+                  <Technology key={i}>{technology}</Technology>
+                ))}
+              </TechnologiesUsedContainer>
             </ProjectDescription>
-            <span>
-              Co-developed with{" "}
-              <a
-                href="https://a7acreative.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                a7acreative.com
-              </a>
-            </span>
           </Col>
         </Row>
       )}
-    </WebsiteContainer>
+    </PrototypeContainer>
   );
 };
 
-const WebsiteContainer = styled(motion.div)`
+const PrototypeContainer = styled(motion.div)`
   margin: 25px 0;
 `;
 
-
-
-export default WebsiteNew;
+const LinksContainer = styled.div`
+  a {
+    margin-bottom: 20px;
+  }
+`;
+export default Prototype;

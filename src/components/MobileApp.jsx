@@ -1,16 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { motion, useAnimation } from "framer-motion";
-import { Col, Row } from "react-bootstrap";
-import { useEffect } from "react";
-import { contentfulClient } from "../contentfulClient";
-import { useState } from "react";
 import { useInView } from "react-intersection-observer";
-import { ImageWrapper, Image, ProjectDescription } from "./myLayoutCompontents";
+import { contentfulClient } from "../contentfulClient";
+import { Row, Col } from "react-bootstrap";
+import { ImageWrapper, Image, ProjectDescription, TechnologiesUsedContainer, Technology } from "./myLayoutCompontents";
 
-const WebsiteNew = ({ websiteData }) => {
+const MobileApp = ({ appData }) => {
   const controls = useAnimation();
-  const [websiteRow, inView] = useInView();
+  const [appContainer, inView] = useInView();
 
   useEffect(() => {
     if (inView) {
@@ -21,11 +19,12 @@ const WebsiteNew = ({ websiteData }) => {
   const [imageURL, setImageURL] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
+
   const fetchImage = async () => {
     try {
       setLoading(true);
       setError(false);
-      const asset = await contentfulClient.getAsset(websiteData.image.sys.id);
+      const asset = await contentfulClient.getAsset(appData.image.sys.id);
       setImageURL(asset.fields.file.url);
       setLoading(false);
     } catch (error) {
@@ -39,8 +38,8 @@ const WebsiteNew = ({ websiteData }) => {
     fetchImage();
   }, []);
   return (
-    <WebsiteContainer
-      ref={websiteRow}
+    <AppContainer
+      ref={appContainer}
       animate={controls}
       initial="hidden"
       variants={{
@@ -60,28 +59,32 @@ const WebsiteNew = ({ websiteData }) => {
       {loading ? (
         <div>Loading...</div>
       ) : error ? (
-        <div>Error occured. </div>
+        <div>Error occured... </div>
       ) : (
         <Row>
           <Col xs={12} md={7}>
-            {
-              <ImageWrapper>
-                <Image src={`https:${imageURL}?fm=jpg&fl=progressive`} alt="" />
-              </ImageWrapper>
-            }
+            <ImageWrapper>
+              <Image src={`https:${imageURL}?fm=jpg&fl=progressive`} alt="" />
+            </ImageWrapper>
           </Col>
           <Col xs={12} md={5}>
             <ProjectDescription>
-              <h2>{websiteData.name}</h2>
-              <p>{websiteData.description}</p>
-              
-              <a
-                href={websiteData.link}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span>Visit site</span>
-              </a>
+              <h2>{appData.name}</h2>
+              <p>{appData.description}</p>
+              {appData.link && (
+                <a
+                  href={appData.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Visit Project
+                </a>
+              )}
+              <TechnologiesUsedContainer>
+                {appData.technologies.map((technology, i) => (
+                  <Technology key={i}>{technology}</Technology>
+                ))}
+              </TechnologiesUsedContainer>
             </ProjectDescription>
             <span>
               Co-developed with{" "}
@@ -96,14 +99,14 @@ const WebsiteNew = ({ websiteData }) => {
           </Col>
         </Row>
       )}
-    </WebsiteContainer>
+    </AppContainer>
   );
 };
 
-const WebsiteContainer = styled(motion.div)`
+const AppContainer = styled(motion.div)`
   margin: 25px 0;
 `;
 
 
 
-export default WebsiteNew;
+export default MobileApp;

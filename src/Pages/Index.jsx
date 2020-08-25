@@ -3,6 +3,8 @@ import Hero from "../components/Hero";
 import Projects from "../components/Projects";
 import Websites from "../components/Websites";
 import gsap from "gsap";
+import MobileApps from "../components/MobileApps";
+import Prototypes from "../components/Prototypes";
 
 const Index = () => {
   const [reload, setReload] = useState(true);
@@ -25,6 +27,8 @@ const Index = () => {
       <Hero />
       <Websites />
       <Projects />
+      <MobileApps />
+      <Prototypes />
     </>
   );
 };
