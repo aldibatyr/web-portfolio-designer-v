@@ -34,7 +34,7 @@ const Contact = () => {
         <Row>
           <Col>
             <div className="header">
-              <h1>
+              <h1 style={{fontFamily: "Poppins"}}>
                 Just in case if you have an urge to find me on social media
               </h1>
             </div>
