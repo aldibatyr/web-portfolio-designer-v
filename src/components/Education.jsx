@@ -74,7 +74,7 @@ const Education = () => {
         <div style={{ minWidth: "33px" }} />
         <MyColumn>
           <h5 style={{ textTransform: "uppercase" }}>
-            Assiciate of Arts, Social and Behavioral Sciences
+            Associate of Arts, Social and Behavioral Sciences
           </h5>
           <p>
             Studied how masses think and make decisions based on outside factors
